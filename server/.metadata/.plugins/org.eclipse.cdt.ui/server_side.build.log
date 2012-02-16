@@ -2,8 +2,28 @@
 **** Build of configuration Debug for project server_side ****
 
 make all 
+Building file: ../alm_service_common.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/lib/axis2/include/axis2-1.6.0 -I"/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb" -I"/home/s0965328/workspace-smartphone/server/server_side/src" -O3 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"alm_service_common.d" -MT"alm_service_common.d" -o"alm_service_common.o" "../alm_service_common.cpp"
+/home/s0965328/workspace-smartphone/server/server_side/src/GlobalVariables.h:14:15: warning: ‘GlobalVariables::logger’ defined but not used [-Wunused-variable]
+Finished building: ../alm_service_common.cpp
+ 
+Building file: ../alm_ssd_mod.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/lib/axis2/include/axis2-1.6.0 -I"/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb" -I"/home/s0965328/workspace-smartphone/server/server_side/src" -O3 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"alm_ssd_mod.d" -MT"alm_ssd_mod.d" -o"alm_ssd_mod.o" "../alm_ssd_mod.cpp"
+/home/s0965328/workspace-smartphone/server/server_side/src/GlobalVariables.h:8:15: warning: ‘GlobalVariables::m_months’ defined but not used [-Wunused-variable]
+/home/s0965328/workspace-smartphone/server/server_side/src/GlobalVariables.h:14:15: warning: ‘GlobalVariables::logger’ defined but not used [-Wunused-variable]
+Finished building: ../alm_ssd_mod.cpp
+ 
+Building file: ../axis2_skel_Alm.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/lib/axis2/include/axis2-1.6.0 -I"/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb" -I"/home/s0965328/workspace-smartphone/server/server_side/src" -O3 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"axis2_skel_Alm.d" -MT"axis2_skel_Alm.d" -o"axis2_skel_Alm.o" "../axis2_skel_Alm.cpp"
+/home/s0965328/workspace-smartphone/server/server_side/src/GlobalVariables.h:8:15: warning: ‘GlobalVariables::m_months’ defined but not used [-Wunused-variable]
+/home/s0965328/workspace-smartphone/server/server_side/src/GlobalVariables.h:14:15: warning: ‘GlobalVariables::logger’ defined but not used [-Wunused-variable]
+Finished building: ../axis2_skel_Alm.cpp
+ 
 Building target: libAlm.so
 Invoking: GCC C++ Linker
-g++ -L/usr/lib -L/usr/lib/axis2/lib -shared -olibAlm.so  ./axis2_skel_Alm.o ./axis2_svc_skel_Alm.o  ./src/AlmDataWriter.o ./src/DataRetriever.o ./src/Log.o ./src/ProbabilityPolicy.o  ./axis2c_adb/adb_OptimizePortfolioSSDReturn.o ./axis2c_adb/adb_SymbolSet.o ./axis2c_adb/adb_optimizePortfolioSSD.o ./axis2c_adb/adb_optimizePortfolioSSDResponse.o ./axis2c_adb/axis2_extension_mapper.o   -laxutil -lcurl -laxis2_axiom -laxis2_engine -laxis2_parser -lpthread -laxis2_http_sender -laxis2_http_receiver -lguththila
+g++ -L/usr/lib -L/usr/lib/axis2/lib -shared -olibAlm.so  ./alm_service_common.o ./alm_ssd_mod.o ./axis2_skel_Alm.o ./axis2_svc_skel_Alm.o  ./src/AlmDataWriter.o ./src/DataRetriever.o ./src/Log.o ./src/ProbabilityPolicy.o  ./axis2c_adb/adb_OptimizePortfolioSSDReturn.o ./axis2c_adb/adb_SymbolSet.o ./axis2c_adb/adb_optimizePortfolioSSD.o ./axis2c_adb/adb_optimizePortfolioSSDResponse.o ./axis2c_adb/axis2_extension_mapper.o   -laxutil -lcurl -laxis2_axiom -laxis2_engine -laxis2_parser -lpthread -laxis2_http_sender -laxis2_http_receiver -lguththila
 Finished building target: libAlm.so
  
