@@ -1,0 +1,25 @@
+/*
+ * DataRetrieve.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef DATARETRIEVE_H_
+#define DATARETRIEVE_H_
+
+#include <string>
+#include <vector>
+#include "axis2_skel_Alm.h"
+
+using namespace std;
+
+class DataRetriever {
+private:
+	DataRetriever();
+	virtual ~DataRetriever();
+public:
+	static void getReturnDataVector(string url, vector<double>& returns);
+};
+
+#endif /* DATARETRIEVE_H_ */

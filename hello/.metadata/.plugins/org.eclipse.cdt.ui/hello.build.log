@@ -1,0 +1,16 @@
+
+**** Build of configuration Debug for project hello ****
+
+make all 
+Building file: ../src/hello.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/axis2/include/axis2-1.6.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hello.d" -MT"src/hello.d" -o"src/hello.o" "../src/hello.c"
+../src/hello.c: In function ‘process_om_response’:
+../src/hello.c:214:16: warning: unused variable ‘return_node’ [-Wunused-variable]
+Finished building: ../src/hello.c
+ 
+Building target: hello
+Invoking: GCC C++ Linker
+g++ -L/usr/lib/axis2/lib -o"hello"  ./src/hello.o   -laxutil -laxis2_axiom -laxis2_parser -laxis2_engine -lpthread -laxis2_http_sender -laxis2_http_receiver
+Finished building target: hello
+ 

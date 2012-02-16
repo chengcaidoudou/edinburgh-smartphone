@@ -1,0 +1,19 @@
+
+**** Build of configuration Debug for project request_handle ****
+
+make all 
+Building file: ../src/CInterface.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CInterface.d" -MT"src/CInterface.d" -o"src/CInterface.o" "../src/CInterface.cpp"
+Finished building: ../src/CInterface.cpp
+ 
+Building file: ../src/Request.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Request.d" -MT"src/Request.d" -o"src/Request.o" "../src/Request.cpp"
+Finished building: ../src/Request.cpp
+ 
+Building target: libalmhandler.so
+Invoking: GCC C++ Linker
+g++ -shared -o"libalmhandler.so"  ./src/CInterface.o ./src/Request.o   
+Finished building target: libalmhandler.so
+ 

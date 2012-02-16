@@ -1,0 +1,393 @@
+src/hello.d: ../src/hello.c /usr/lib/axis2/include/axis2-1.6.0/axiom.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_node.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_env.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_allocator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_utils_defines.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_error.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_log.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_thread_pool.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_thread.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_utils.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_date_time.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_base64_binary.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_base64.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_attribute.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_qname.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_string.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_namespace.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_output.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_xml_writer.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_defines.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_array_list.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_child_element_iterator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_text.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_data_handler.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_children_iterator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_children_qname_iterator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_children_with_specific_attribute_iterator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_comment.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_doctype.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_document.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_element.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_hash.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_navigator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_processing_instruction.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_stax_builder.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_xml_reader.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_data_source.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_stream.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_util.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_class_loader.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_dll_desc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/platforms/axutil_platform_auto_sense.h \
+ /usr/lib/axis2/include/axis2-1.6.0/platforms/unix/axutil_unix.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_config.h \
+ /usr/lib/axis2/include/axis2-1.6.0/config.h \
+ /usr/lib/axis2/include/axis2-1.6.0/platforms/unix/axutil_uuid_gen_unix.h \
+ /usr/lib/axis2/include/axis2-1.6.0/platforms/unix/axutil_date_time_util_unix.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_param.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_dir_handler.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_file.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_file_handler.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_linked_list.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_network_handler.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_param_container.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_property.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_stack.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_string_util.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_types.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_url.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_uri.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_uuid_gen.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_body.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_const.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_envelope.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_builder.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_mime_parser.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_mime_const.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_code.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_detail.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_node.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_reason.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_role.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_sub_code.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_text.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_value.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_header_block.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axiom_soap_header.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_client.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_async_result.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_defines.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_msg_ctx.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_ctx.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_relates_to.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_const.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_handler_desc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_phase_rule.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_handler.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_msg_info_headers.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_endpoint_ref.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_any_content_type.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc_name.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_callback.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_op_client.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_options.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_transport_in_desc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_phase_meta.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_phase.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_flow.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_transport_out_desc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_transport_sender.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_transport_receiver.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_conf_ctx.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc_grp_ctx.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc_ctx.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_op_ctx.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_op.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_flow_container.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc_grp.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_desc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_description.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_phase_resolver.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_module_desc.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_conf.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_phases_info.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_msg_recv.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc_skeleton.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svr_callback.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_phase_holder.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_stub.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axis2_svc_client.h \
+ /usr/lib/axis2/include/axis2-1.6.0/neethi_policy.h \
+ /usr/lib/axis2/include/axis2-1.6.0/neethi_operator.h \
+ /usr/lib/axis2/include/axis2-1.6.0/neethi_includes.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_log_default.h \
+ /usr/lib/axis2/include/axis2-1.6.0/axutil_error_default.h \
+ /usr/lib/axis2/include/axis2-1.6.0/neethi_constants.h \
+ /usr/lib/axis2/include/axis2-1.6.0/rp_defines.h \
+ /usr/lib/axis2/include/axis2-1.6.0/neethi_exactlyone.h
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_node.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_env.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_allocator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_utils_defines.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_error.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_log.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_thread_pool.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_thread.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_utils.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_date_time.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_base64_binary.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_base64.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_attribute.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_qname.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_string.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_namespace.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_output.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_xml_writer.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_defines.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_array_list.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_child_element_iterator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_text.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_data_handler.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_children_iterator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_children_qname_iterator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_children_with_specific_attribute_iterator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_comment.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_doctype.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_document.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_element.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_hash.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_navigator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_processing_instruction.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_stax_builder.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_xml_reader.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_data_source.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_stream.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_util.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_class_loader.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_dll_desc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/platforms/axutil_platform_auto_sense.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/platforms/unix/axutil_unix.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_config.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/config.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/platforms/unix/axutil_uuid_gen_unix.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/platforms/unix/axutil_date_time_util_unix.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_param.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_dir_handler.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_file.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_file_handler.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_linked_list.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_network_handler.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_param_container.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_property.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_stack.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_string_util.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_types.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_url.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_uri.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_uuid_gen.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_body.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_const.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_envelope.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_builder.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_mime_parser.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_mime_const.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_code.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_detail.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_node.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_reason.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_role.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_sub_code.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_text.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_fault_value.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_header_block.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axiom_soap_header.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_client.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_async_result.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_defines.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_msg_ctx.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_ctx.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_relates_to.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_const.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_handler_desc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_phase_rule.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_handler.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_msg_info_headers.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_endpoint_ref.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_any_content_type.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc_name.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_callback.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_op_client.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_options.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_transport_in_desc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_phase_meta.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_phase.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_flow.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_transport_out_desc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_transport_sender.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_transport_receiver.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_conf_ctx.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc_grp_ctx.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc_ctx.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_op_ctx.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_op.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_flow_container.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc_grp.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_desc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_description.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_phase_resolver.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_module_desc.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_conf.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_phases_info.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_msg_recv.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc_skeleton.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svr_callback.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_phase_holder.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_stub.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axis2_svc_client.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/neethi_policy.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/neethi_operator.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/neethi_includes.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_log_default.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/axutil_error_default.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/neethi_constants.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/rp_defines.h:
+
+/usr/lib/axis2/include/axis2-1.6.0/neethi_exactlyone.h:

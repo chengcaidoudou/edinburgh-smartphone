@@ -1,0 +1,26 @@
+/*
+ * DataRetrieve.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef DATARETRIEVE_H_
+#define DATARETRIEVE_H_
+
+#include <string>
+#include <vector>
+#include <axutil_env.h>
+
+using namespace std;
+
+struct axutil_env_t;
+class DataRetriever {
+private:
+	DataRetriever();
+	virtual ~DataRetriever();
+public:
+	static void getReturnDataVector(string url,const axutil_env_t* env, vector<double>& returns);
+};
+
+#endif /* DATARETRIEVE_H_ */

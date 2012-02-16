@@ -1,0 +1,72 @@
+
+
+    /**
+     * axis2_skel_Alm.c
+     *
+     * This file was auto-generated from WSDL for "Alm|http://uk.ac.ed.maths.org" service
+     * by the Apache Axis2/C version: 1.6.1  Built on : Aug 31, 2011 (12:22:40 CEST)
+     * axis2_skel_Alm Axis2/C skeleton for the axisService
+     */
+
+     #include "axis2_skel_Alm.h"
+
+     
+
+		 
+        /**
+         * auto generated function definition signature
+         * for "optimizedPortfolioSet|http://uk.ac.ed.maths.org" operation.
+         * @param env environment ( mandatory)* @param MessageContext the outmessage context
+         * @param _optimizedPortfolioSet of the adb_optimizedPortfolioSetE0_t*
+         *
+         * @return adb_optimizedPortfolioSetResponse_t*
+         */
+        adb_optimizedPortfolioSetResponse_t* axis2_skel_Alm_optimizedPortfolioSet(const axutil_env_t *env , axis2_msg_ctx_t *msg_ctx,
+                                              adb_optimizedPortfolioSetE0_t* _optimizedPortfolioSet )
+        {
+			adb_SymbolSet_t* symbolSet = adb_optimizedPortfolioSetE0_get_args0(_optimizedPortfolioSet,env);
+        	axis2_char_t* benchmark = adb_optimizedPortfolioSetE0_get_args1(_optimizedPortfolioSet,env);
+        	axutil_date_time_t* start = adb_optimizedPortfolioSetE0_get_args2(_optimizedPortfolioSet,env);
+        	axutil_date_time_t* end = adb_optimizedPortfolioSetE0_get_args3(_optimizedPortfolioSet,env);
+			axutil_array_list_t* symbols = adb_SymbolSet_get_symbols(symbolSet,env);
+
+			int numSymbols = axutil_array_list_size(symbols,env);
+			int i=0;
+			for(i=0;i<numSymbols;i++)
+			{
+				axis2_char_t* symbol = axutil_array_list_get(symbols,env,i);
+				AXIS2_LOG_INFO(env->log,"symbols[%d]=[%s]",i,symbol);
+			}
+			AXIS2_LOG_INFO(env->log,"Incomming Request ============");
+			AXIS2_LOG_INFO(env->log,"Incomming Request ============");
+			AXIS2_LOG_INFO(env->log,"benchmark[%s]",benchmark);
+
+
+			adb_optimizedPortfolioSetE0_free(_optimizedPortfolioSet,env);
+
+			adb_optimizedPortfolioSetResponse_t* response = adb_optimizedPortfolioSetResponse_create(env);
+			adb_OptimizedPortfolioSet_t* portfolioSet = adb_OptimizedPortfolioSet_create(env);
+			adb_OptimizedPortfolioSet_add_portfolioRatio(portfolioSet,env,0.1);
+			adb_OptimizedPortfolioSet_add_portfolioRatio(portfolioSet,env,0.2);
+			adb_OptimizedPortfolioSet_add_portfolioRatio(portfolioSet,env,0.3);
+			adb_OptimizedPortfolioSet_add_portfolioRatio(portfolioSet,env,0.4);
+			adb_optimizedPortfolioSetResponse_set_return(response,env,portfolioSet);
+
+
+
+
+
+
+			AXIS2_LOG_INFO(env->log,"Response =====================");
+			axutil_array_list_t* ratios = adb_OptimizedPortfolioSet_get_portfolioRatio(portfolioSet,env);
+			int numRatio = axutil_array_list_size(ratios,env);
+			for(i=0;i<numRatio;i++)
+			{
+				double* ratio =(double*)axutil_array_list_get(ratios,env,i);
+				AXIS2_LOG_INFO(env->log,"Ratio[%d]=[%f]",i,*ratio);
+			}
+			AXIS2_LOG_INFO(env->log,"Response =====================");
+			return response;
+        }
+     
+

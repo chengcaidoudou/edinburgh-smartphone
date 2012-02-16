@@ -1,0 +1,22 @@
+/*
+ * DataRetrieve.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef DATARETRIEVE_H_
+#define DATARETRIEVE_H_
+
+#include <string>
+#include <vector>
+
+using namespace std;
+class DataRetriever {
+public:
+	DataRetriever(string url);
+	virtual ~DataRetriever();
+	void getReturnDataVector(vector<double>& returns);
+};
+
+#endif /* DATARETRIEVE_H_ */

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.6.1  Built on : Aug 31, 2011 (12:22:40 CEST) -->
+<service name="Alm">
+    <parameter name="ServiceClass">Alm</parameter>
+    <description>Alm Service
+            </description>
+    <operation name="optimizePortfolioSSD" mep="http://www.w3.org/ns/wsdl/in-out">
+        <parameter name="wsamapping">urn:optimizePortfolioSSD</parameter>
+    </operation>
+</service>

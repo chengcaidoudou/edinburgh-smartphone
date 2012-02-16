@@ -1,0 +1,52 @@
+
+
+    /**
+     * axis2_skel_Alm.c
+     *
+     * This file was auto-generated from WSDL for "Alm|http://uk.ac.ed.maths.org" service
+     * by the Apache Axis2/C version: 1.6.1  Built on : Aug 31, 2011 (12:22:40 CEST)
+     * axis2_skel_Alm Axis2/C skeleton for the axisService
+     */
+
+     #include "axis2_skel_Alm.h"
+
+     
+
+		 
+        /**
+         * auto generated function definition signature
+         * for "optimizedPortfolioSet|http://uk.ac.ed.maths.org" operation.
+         * @param env environment ( mandatory)* @param MessageContext the outmessage context
+         * @param _optimizedPortfolioSet of the adb_optimizedPortfolioSet_t*
+         *
+         * @return adb_optimizedPortfolioSetResponse_t*
+         */
+        adb_optimizedPortfolioSetResponse_t* axis2_skel_Alm_optimizedPortfolioSet(const axutil_env_t *env , axis2_msg_ctx_t *msg_ctx,
+                                              adb_optimizedPortfolioSet_t* _optimizedPortfolioSet )
+        {
+          /* TODO fill this with the necessary business logic */
+
+        	adb_SymbolSet_t* symbolSet = adb_optimizedPortfolioSet_get_args0(_optimizedPortfolioSet,env);
+        	int numSymbols = adb_SymbolSet_get_numSyms(symbolSet,env);
+        	printf("numSymbols[%d] \n",numSymbols);
+        	axutil_array_list_t* symbols = adb_SymbolSet_get_symbols(symbolSet,env);
+        	int symbols_size = axutil_array_list_size(symbols,env);
+        	int i=0;
+        	for(i=0;i<symbols_size;i++)
+        	{
+        		const axis2_char_t* symbol = axutil_array_list_get(symbols,env,i);
+        		printf("the symbol[%d]=[%s] \n",i,symbol);
+        	}
+
+        	adb_optimizedPortfolioSetResponse_t* response = adb_optimizedPortfolioSetResponse_create(env);
+
+
+        	adb_PortfolioSet_t* portfolioSet = adb_PortfolioSet_create(env);
+        	adb_PortfolioSet_set_numAssert(portfolioSet,env,1);
+
+        	adb_optimizedPortfolioSetResponse_set_return(response,env,symbolSet);
+
+          return response;
+        }
+     
+

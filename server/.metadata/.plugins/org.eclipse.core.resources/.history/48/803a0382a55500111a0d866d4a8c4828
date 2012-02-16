@@ -1,0 +1,14 @@
+/*
+ * CInterface.h
+ *
+ *  Created on: Feb 12, 2012
+ *      Author: s0965328
+ */
+
+#ifndef CINTERFACE_H_
+#define CINTERFACE_H_
+
+class CInterface {
+};
+
+#endif /* CINTERFACE_H_ */

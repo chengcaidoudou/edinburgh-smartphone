@@ -1,0 +1,5 @@
+
+public interface Alm {
+
+	public double[] optimizePortfolio(String[] symbols,String benchmark);
+}

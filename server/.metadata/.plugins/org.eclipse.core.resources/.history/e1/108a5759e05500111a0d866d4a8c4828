@@ -1,0 +1,17 @@
+/*
+ * DataRetrieve.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef DATARETRIEVE_H_
+#define DATARETRIEVE_H_
+
+class DataRetrieve {
+public:
+	DataRetrieve();
+	virtual ~DataRetrieve();
+};
+
+#endif /* DATARETRIEVE_H_ */

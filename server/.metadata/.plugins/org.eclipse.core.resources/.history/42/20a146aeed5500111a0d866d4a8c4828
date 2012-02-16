@@ -1,0 +1,36 @@
+/*
+ * Log.cpp
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#include "Log.h"
+#include <fstream>
+
+Log::Log() {
+	log_stream.open(GlobalVariables::logFileName.c_str(),fstream::app);
+}
+
+Log* Log::getInstance()
+{
+	if(GlobalVariables::logger == NULL)
+	{
+		GlobalVariables::logger = new Log();
+	}
+	return GlobalVariables::logger;
+}
+
+Log::~Log() {
+	// TODO Auto-generated destructor stub
+}
+
+void Log::Write(const char* logline, ...)
+{
+	va_list argList;
+	char cbuffer[1024];
+	va_start(argList, logline);
+	vsnprintf(cbuffer, 1024, logline, argList);
+	va_end(argList);
+	m_stream << cbuffer << endl;
+}

@@ -1,0 +1,25 @@
+/*
+ * Log.cpp
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#include "Log.h"
+#include <fstream>
+
+Log::Log() {
+	log_stream.open(GlobalVariables::logFileName.c_str());
+}
+
+Log* Log::getInstance()
+{
+	if(GlobalVariables::logger == NULL)
+	{
+		GlobalVariables::logger = new Log()
+	}
+}
+
+Log::~Log() {
+	// TODO Auto-generated destructor stub
+}

@@ -1,0 +1,25 @@
+/*
+ * AlmDataWriter.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef ALMDATAWRITER_H_
+#define ALMDATAWRITER_H_
+
+class AlmDataWriter {
+public:
+	vector<string> symbols;
+	vector<vector<double> > returnsList;
+	vector<double> probs;
+
+	int numNodes;
+
+	AlmDataWriter();
+	virtual ~AlmDataWriter();
+
+	void addReturnData(string symbol,vector<double> returns);
+};
+
+#endif /* ALMDATAWRITER_H_ */

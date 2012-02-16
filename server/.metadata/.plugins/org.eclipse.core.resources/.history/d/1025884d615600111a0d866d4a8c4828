@@ -1,0 +1,77 @@
+/*
+ * AlmDataWriter.cpp
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#include "AlmDataWriter.h"
+#include "Log.h"
+#include "ProbabilityPolicy.h"
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+AlmDataWriter::AlmDataWriter() {
+	// TODO Auto-generated constructor stub
+
+}
+
+AlmDataWriter::~AlmDataWriter() {
+	// TODO Auto-generated destructor stub
+}
+
+void AlmDataWriter::addReturnData(string symbol,vector<double> returns)
+{
+	this->symbols.push_back(symbol);
+	this->returnsList.push_back(returns);
+	if(this->returnsList.empty() || returns.size()!=this->returnsList.front().size())
+	{
+		Log::ERROR("-- - symbols return data doesn't match .....");
+	}
+}
+void AlmDataWriter::addBenchmarkReturnData(string symbol,vector<double> returns)
+{
+	this->benchmark = symbol;
+	this->bReturns = returns;
+	if(this->returnsList.front().size()!=returns.size())
+	{
+		Log::ERROR("-- - benchmark return data doesn't match .....");
+	}
+}
+
+void AlmDataWriter::calculateHBenchMark()
+{
+	vector<double>::iterator curr = this->bReturns.begin();
+	for(;curr!=this->bReturns.end();curr++)
+	{
+		double sum = 0;
+		vector<double>::iterator it = this->bReturns.begin();
+		for(;it!=this->bReturns.end();it++)
+		{
+			double diff = (*curr)-(*it);
+			sum += diff>0?diff:0;
+		}
+		this->bhReturns.push_back(sum);
+	}
+	Log::DEBUG("benchmark returns - size[%d] before remove duplicate.",this->bReturns.size());
+	std::sort(this->bReturns.begin(),this->bReturns.end());
+	this->bReturns.erase(unique(this->bReturns.begin(),this->bReturns.end()),this->bReturns.end());
+	Log::DEBUG("benchmark returns - size[%d] after remove duplicate.",this->bReturns.size());
+}
+void AlmDataWriter::prepareDataToWrite()
+{
+	this->numNodes = this->returnsList.front().size() + 1;
+	ProbabilityPolicy::getEquallyLikelyProbabilityVector(this->numNodes-1,probs);
+	if(!this->returnsList.front().size()!=probs.size())
+	{
+		Log::ERROR("-- - probability vector size doesn't match number of scenarios.....");
+	}
+	Log::DEBUG("number of nodes is [%d]",this->numNodes);
+	this->calculateHBenchMark();
+}
+void AlmDataWriter::writeSMLDataFile(string filename)
+{
+	this->prepareDataToWrite();
+	Log::DEBUG("writing sml data file to [%s]",filename.c_str());
+}

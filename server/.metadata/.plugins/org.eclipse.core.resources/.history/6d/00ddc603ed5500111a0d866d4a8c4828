@@ -1,0 +1,17 @@
+/*
+ * Log.cpp
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#include "Log.h"
+
+Log::Log() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Log::~Log() {
+	// TODO Auto-generated destructor stub
+}

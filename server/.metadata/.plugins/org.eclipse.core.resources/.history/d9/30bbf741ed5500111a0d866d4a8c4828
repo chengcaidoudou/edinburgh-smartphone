@@ -1,0 +1,27 @@
+/*
+ * Log.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef LOG_H_
+#define LOG_H_
+
+#include "GlobalVariables.h"
+#include <fstream>
+
+class Log {
+
+private:
+	Log();
+	virtual ~Log();
+	static Log* getInstance();
+	ofstream log_stream;
+
+public:
+	static void write(const char* line,...);
+
+};
+
+#endif /* LOG_H_ */

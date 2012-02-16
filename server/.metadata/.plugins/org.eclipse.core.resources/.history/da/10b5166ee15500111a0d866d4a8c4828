@@ -1,0 +1,17 @@
+/*
+ * ProbabilityPolicy.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef PROBABILITYPOLICY_H_
+#define PROBABILITYPOLICY_H_
+
+class ProbabilityPolicy {
+public:
+	ProbabilityPolicy();
+	virtual ~ProbabilityPolicy();
+};
+
+#endif /* PROBABILITYPOLICY_H_ */

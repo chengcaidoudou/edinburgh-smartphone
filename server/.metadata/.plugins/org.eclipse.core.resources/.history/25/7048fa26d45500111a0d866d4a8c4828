@@ -1,0 +1,17 @@
+/*
+ * UrlStream.cpp
+ *
+ *  Created on: Feb 12, 2012
+ *      Author: s0965328
+ */
+
+#include "UrlStream.h"
+
+UrlStream::UrlStream() {
+	// TODO Auto-generated constructor stub
+
+}
+
+UrlStream::~UrlStream() {
+	// TODO Auto-generated destructor stub
+}

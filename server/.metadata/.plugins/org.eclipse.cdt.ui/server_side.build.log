@@ -1,0 +1,9 @@
+
+**** Build of configuration Debug for project server_side ****
+
+make all 
+Building target: libAlm.so
+Invoking: GCC C++ Linker
+g++ -L/usr/lib -L/usr/lib/axis2/lib -shared -olibAlm.so  ./axis2_skel_Alm.o ./axis2_svc_skel_Alm.o  ./src/AlmDataWriter.o ./src/DataRetriever.o ./src/Log.o ./src/ProbabilityPolicy.o  ./axis2c_adb/adb_OptimizePortfolioSSDReturn.o ./axis2c_adb/adb_SymbolSet.o ./axis2c_adb/adb_optimizePortfolioSSD.o ./axis2c_adb/adb_optimizePortfolioSSDResponse.o ./axis2c_adb/axis2_extension_mapper.o   -laxutil -lcurl -laxis2_axiom -laxis2_engine -laxis2_parser -lpthread -laxis2_http_sender -laxis2_http_receiver -lguththila
+Finished building target: libAlm.so
+ 

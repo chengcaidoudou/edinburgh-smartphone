@@ -1,0 +1,9 @@
+package org.maths.ed.ac.uk;
+
+public abstract class OptimizedPortfolioSet {
+	private double[] portfolioRatio;
+	private double expReturn;
+	public abstract double[] getPortfolioRatio();
+	public abstract double getExpReturn();
+}
+

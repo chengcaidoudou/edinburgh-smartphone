@@ -1,0 +1,36 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../adb/adb_OptimizedPortfolioSet.c \
+../adb/adb_SymbolSet.c \
+../adb/adb_optimizedPortfolioSetE0.c \
+../adb/adb_optimizedPortfolioSetResponse.c \
+../adb/axis2_extension_mapper.c 
+
+OBJS += \
+./adb/adb_OptimizedPortfolioSet.o \
+./adb/adb_SymbolSet.o \
+./adb/adb_optimizedPortfolioSetE0.o \
+./adb/adb_optimizedPortfolioSetResponse.o \
+./adb/axis2_extension_mapper.o 
+
+C_DEPS += \
+./adb/adb_OptimizedPortfolioSet.d \
+./adb/adb_SymbolSet.d \
+./adb/adb_optimizedPortfolioSetE0.d \
+./adb/adb_optimizedPortfolioSetResponse.d \
+./adb/axis2_extension_mapper.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+adb/%.o: ../adb/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C Compiler'
+	gcc -I/usr/lib/axis2/include/axis2-1.6.0 -I"/home/s0965328/workspace-smartphone/server/server_side/adb" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

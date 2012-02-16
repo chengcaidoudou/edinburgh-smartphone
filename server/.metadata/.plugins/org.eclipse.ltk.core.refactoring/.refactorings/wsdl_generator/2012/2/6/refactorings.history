@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;org.maths.ed.ac.uk.Portfolio.java&apos; to &apos;PortfolioSet.java&apos;&#x0A;- Original project: &apos;wsdl_generator&apos;&#x0A;- Original element: &apos;org.maths.ed.ac.uk.Portfolio.java&apos;&#x0A;- Renamed element: &apos;org.maths.ed.ac.uk.PortfolioSet.java&apos;" description="Rename compilation unit &apos;Portfolio.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;org.maths.ed.ac.uk{Portfolio.java" name="PortfolioSet.java" references="false" stamp="1328928077115" version="1.0"/>
+</session>

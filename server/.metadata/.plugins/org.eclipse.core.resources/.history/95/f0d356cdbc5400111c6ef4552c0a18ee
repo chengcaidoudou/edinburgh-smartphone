@@ -1,0 +1,10 @@
+package org.maths.ed.ac.uk;
+
+public abstract class SymbolSet {
+	String[] symbols;
+	int numSyms;
+	
+	public abstract void addSymbolSet();
+	public abstract int getNumSyms();
+	public abstract String[] getSymbols();
+}

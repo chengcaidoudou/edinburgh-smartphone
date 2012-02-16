@@ -1,0 +1,17 @@
+/*
+ * RequestTest.cpp
+ *
+ *  Created on: Feb 12, 2012
+ *      Author: s0965328
+ */
+
+#include "Request.h"
+
+RequestTest::RequestTest() {
+	// TODO Auto-generated constructor stub
+
+}
+
+RequestTest::~RequestTest() {
+	// TODO Auto-generated destructor stub
+}

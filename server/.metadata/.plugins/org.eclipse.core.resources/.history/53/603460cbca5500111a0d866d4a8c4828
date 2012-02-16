@@ -1,0 +1,27 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../axis2c_skel/axis2_skel_Alm.c \
+../axis2c_skel/axis2_svc_skel_Alm.c 
+
+OBJS += \
+./axis2c_skel/axis2_skel_Alm.o \
+./axis2c_skel/axis2_svc_skel_Alm.o 
+
+C_DEPS += \
+./axis2c_skel/axis2_skel_Alm.d \
+./axis2c_skel/axis2_svc_skel_Alm.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+axis2c_skel/%.o: ../axis2c_skel/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C Compiler'
+	gcc -I/usr/lib/axis2/include/axis2-1.6.0 -I"/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb" -I"/home/s0965328/workspace-smartphone/server/server_side/axis2c_skel" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

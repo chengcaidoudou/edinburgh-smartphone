@@ -1,0 +1,9 @@
+package org.maths.ed.ac.uk;
+
+public abstract class PortfolioSet {
+	int numAsset;
+	double[] portfolio;
+
+	public abstract void addPorfolio();
+}
+

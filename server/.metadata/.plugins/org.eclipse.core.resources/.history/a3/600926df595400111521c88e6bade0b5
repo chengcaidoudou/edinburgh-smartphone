@@ -1,0 +1,6 @@
+package org.maths.ed.ac.uk;
+
+public class PortfolioSet {
+	int numAsset;
+	double[] portfolio;
+}

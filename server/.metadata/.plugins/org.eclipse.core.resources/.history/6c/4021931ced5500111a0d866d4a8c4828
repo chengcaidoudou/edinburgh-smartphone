@@ -1,0 +1,23 @@
+/*
+ * Log.h
+ *
+ *  Created on: Feb 13, 2012
+ *      Author: s0965328
+ */
+
+#ifndef LOG_H_
+#define LOG_H_
+
+#include "GlobalVariables.h"
+
+class Log {
+private:
+	Log();
+	virtual ~Log();
+	Log* getInstance();
+public:
+	static void write(const char* line,...);
+
+};
+
+#endif /* LOG_H_ */

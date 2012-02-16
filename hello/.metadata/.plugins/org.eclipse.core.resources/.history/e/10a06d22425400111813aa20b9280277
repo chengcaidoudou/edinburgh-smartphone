@@ -1,0 +1,5 @@
+gcc -o hello -I/usr/include/axis2-1.6.0/ -l/usr/lib/axis2/lib/libaxis2_axiom.so -l/usr/lib/axis2/lib/libaxutil.so -l/usr/lib/axis2/lib/libaxis2_engine.so -l/usr/lib/axis2/lib/libaxis2_parser.so -l/usr/lib/axis2/lib/libaxis2_http_sender.so -l/usr/lib/axis2/lib/libaxis2_http_receiver -lpthread -ldl -Wl,--rpath -Wl,/usr/lib/axis2/lib
+
+
+-laxis2_parser^Claxis2_engine -lpthread -laxis2_http_sender -laxis2_http_receiver -Wall hello.c -ldl -Wl,--rpath -Wl,/usr/lib/axis2/lib
+

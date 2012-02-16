@@ -1,0 +1,66 @@
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sat Feb 11 00:07:34 2012] [debug] conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sat Feb 11 00:07:34 2012] [debug] conf_builder.c(379) Module addressing found in axis2.xml
+[Sat Feb 11 00:07:34 2012] [debug] class_loader.c(140) /usr/lib/axis2/lib/libaxis2_http_sender.so shared lib loaded successfully
+[Sat Feb 11 00:07:34 2012] [debug] class_loader.c(140) /usr/lib/axis2/lib/libaxis2_http_receiver.so shared lib loaded successfully
+[Sat Feb 11 00:07:34 2012] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /usr/lib/axis2/modules/addressing/libaxis2_mod_addr.so
+[Sat Feb 11 00:07:34 2012] [debug] class_loader.c(140) /usr/lib/axis2/modules/addressing/libaxis2_mod_addr.so shared lib loaded successfully
+[Sat Feb 11 00:07:34 2012] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /usr/lib/axis2/modules/logging/libaxis2_mod_log.so
+[Sat Feb 11 00:07:34 2012] [debug] class_loader.c(140) /usr/lib/axis2/modules/logging/libaxis2_mod_log.so shared lib loaded successfully
+[Sat Feb 11 00:07:34 2012] [debug] svc_builder.c(318) DLL path is : /usr/lib/axis2/services/hello/libhello.so
+[Sat Feb 11 00:07:34 2012] [debug] om_element.c(1114) There are no child elements for the node
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingInHandler to phase Transport
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(222) svc name is:hello
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(139) Service name is : hello
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(1123) Operation name is : greet
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(139) Service name is : __ANONYMOUS_SERVICE__
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_resolver.c(723) Module name is:addressing
+[Sat Feb 11 00:07:34 2012] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sat Feb 11 00:07:34 2012] [debug] op_client.c(888) Start:axis2_op_client_infer_transport
+[Sat Feb 11 00:07:34 2012] [debug] op_client.c(954) End:axis2_op_client_infer_transport
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler AddressingOutHandler within the phase MessageOut
+[Sat Feb 11 00:07:34 2012] [info]  Starting addressing out handler
+[Sat Feb 11 00:07:34 2012] [debug] addr_out_handler.c(133) No action present. Stop processing addressing
+[Sat Feb 11 00:07:34 2012] [debug] http_transport_sender.c(246) ctx_epr:http://127.0.0.1:80/axis2/services/hello
+[Sat Feb 11 00:07:34 2012] [debug] http_transport_sender.c(805) using axis2 native http sender.
+[Sat Feb 11 00:07:34 2012] [debug] http_sender.c(416) msg_ctx_id:urn:uuid:6611549a-5444-1e11-3dc4-00e04c03bce7
+[Sat Feb 11 00:07:34 2012] [debug] http_transport_sender.c(822) OP name axutil_qname_get_localpart = http://www.w3.org/2004/08/wsdl/out-in
+[Sat Feb 11 00:07:34 2012] [debug] soap_builder.c(945) identified soap version is soap12
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler request_uri_based_dispatcher within the phase Transport
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler AddressingInHandler within the phase Transport
+[Sat Feb 11 00:07:34 2012] [info]  Starting addressing in handler
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler addressing_based_dispatcher within the phase Transport
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler rest_dispatcher within the phase Dispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler soap_message_body_based_dispatcher within the phase Dispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler soap_action_based_dispatcher within the phase Dispatch
+[Sat Feb 11 00:07:34 2012] [debug] soap_action_disp.c(89) Checking for service using SOAPAction is not implemented
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler dispatch_post_conditions_evaluator within the phase PostDispatch
+[Sat Feb 11 00:07:34 2012] [debug] phase.c(210) Invoke the handler context_handler within the phase PostDispatch
+[Sat Feb 11 00:07:34 2012] [debug] arch_file_data.c(149) Service name :hello

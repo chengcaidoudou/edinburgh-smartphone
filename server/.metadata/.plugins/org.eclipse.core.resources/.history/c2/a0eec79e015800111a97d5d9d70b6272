@@ -1,0 +1,8 @@
+package org.maths.ed.ac.uk;
+
+public abstract class OptimizePortfolioSSDReturn {
+	public int resultCode;
+	public double[] portfolioRatio;
+	public double expReturn;
+
+}

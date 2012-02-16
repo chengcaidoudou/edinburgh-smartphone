@@ -1,0 +1,14 @@
+
+**** Build of configuration Debug for project request_handling ****
+
+make all 
+Building file: ../src/request_handling.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/request_handling.d" -MT"src/request_handling.d" -o"src/request_handling.o" "../src/request_handling.cpp"
+Finished building: ../src/request_handling.cpp
+ 
+Building target: request_handling
+Invoking: GCC C++ Linker
+g++  -o"request_handling"  ./src/request_handling.o   
+Finished building target: request_handling
+ 

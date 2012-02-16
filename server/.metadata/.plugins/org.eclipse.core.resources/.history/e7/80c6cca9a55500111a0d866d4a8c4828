@@ -1,0 +1,17 @@
+/*
+ * RequestTest.h
+ *
+ *  Created on: Feb 12, 2012
+ *      Author: s0965328
+ */
+
+#ifndef REQUESTTEST_H_
+#define REQUESTTEST_H_
+
+class RequestTest {
+public:
+	RequestTest();
+	virtual ~RequestTest();
+};
+
+#endif /* REQUESTTEST_H_ */

@@ -1,0 +1,38 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../axis2_skel_Alm.cpp 
+
+C_SRCS += \
+../axis2_svc_skel_Alm.c 
+
+OBJS += \
+./axis2_skel_Alm.o \
+./axis2_svc_skel_Alm.o 
+
+C_DEPS += \
+./axis2_svc_skel_Alm.d 
+
+CPP_DEPS += \
+./axis2_skel_Alm.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+%.o: ../%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C++ Compiler'
+	g++ -I"/home/s0965328/workspace-smartphone/server/server_side/src" -I"/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb" -I/usr/lib/axis2/include/axis2-1.6.0 -O3 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+%.o: ../%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C Compiler'
+	g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

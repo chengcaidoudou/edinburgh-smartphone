@@ -1,0 +1,14 @@
+
+**** Build of configuration Debug for project hello_svc ****
+
+make all 
+Building file: ../src/hello_svc.c
+Invoking: GCC C Compiler
+gcc -I/usr/lib/axis2/include/axis2-1.6.0 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/hello_svc.d" -MT"src/hello_svc.d" -o"src/hello_svc.o" "../src/hello_svc.c"
+Finished building: ../src/hello_svc.c
+ 
+Building target: libhello_svc.so
+Invoking: GCC C++ Linker
+g++ -L/usr/lib/axis2/lib -shared -o"libhello_svc.so"  ./src/hello_svc.o   -laxutil -laxis2_axiom -laxis2_engine -lpthread -laxis2_http_sender -laxis2_http_receiver
+Finished building target: libhello_svc.so
+ 

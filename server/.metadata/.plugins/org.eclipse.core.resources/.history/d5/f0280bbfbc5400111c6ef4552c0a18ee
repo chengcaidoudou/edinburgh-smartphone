@@ -1,0 +1,6 @@
+package org.maths.ed.ac.uk;
+
+public abstract class OptimizedPortfolioSet {
+	double[] portfolio;
+}
+

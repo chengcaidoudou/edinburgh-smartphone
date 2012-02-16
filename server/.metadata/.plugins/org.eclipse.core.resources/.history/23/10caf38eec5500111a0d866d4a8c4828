@@ -1,0 +1,10 @@
+#ifndef GLOBALVARIABLES_H_
+#define GLOBALVARIABLES_H_
+
+namespace GlobalVariables
+{
+		static char m_months[13][4]={"","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+		static string logFileName = "/var/log/alm_service.log";
+		static Log* logger = NULL;
+}
+#endif

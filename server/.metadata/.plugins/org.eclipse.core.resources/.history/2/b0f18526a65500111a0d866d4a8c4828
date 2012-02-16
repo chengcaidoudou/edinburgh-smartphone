@@ -1,0 +1,14 @@
+/*
+ * CInterface.cpp
+ *
+ *  Created on: Feb 12, 2012
+ *      Author: s0965328
+ */
+
+#include "CInterface.h"
+
+extern "C" void test()
+{
+
+}
+

@@ -1,0 +1,6 @@
+package org.maths.ed.ac.uk;
+
+public interface Alm {
+
+	public PortfolioSet optimizedPortfolioSet(SymbolSet symbols,String benchmarkSymbol);
+}

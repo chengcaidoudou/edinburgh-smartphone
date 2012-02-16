@@ -1,0 +1,21 @@
+/*
+ * CInterface.cpp
+ *
+ *  Created on: Feb 12, 2012
+ *      Author: s0965328
+ */
+#include <iostream>
+#include <cassert>
+#include "CInterface.h"
+
+extern "C" void test(char* index,char** symbols,int syear,int smonth,int sdate,int eyear,int emonth,int edate,double** ret)
+{
+	double value = 1.0;
+	int numRet = sizeof(ret)/sizeof(ret[0]);
+	for(int i=0;i<numRet;i++)
+	{
+		ret[i]=value;
+		value = value + 0.1;
+	}
+}
+
