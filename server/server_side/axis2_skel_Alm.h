@@ -1,4 +1,5 @@
-
+#ifndef AXIS2_SKEL_ALM_H_
+#define AXIS2_SKEL_ALM_H_
 
     /**
      * axis2_skel_Alm.h
@@ -60,4 +61,4 @@
 	}
 	#endif
     
-
+#endif /* AXIS2_SKEL_ALM_H_ */

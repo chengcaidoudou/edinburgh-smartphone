@@ -9,6 +9,7 @@ namespace GlobalVariables
 		static std::string ALM_SERVICE_LOG_FILE = "/usr/lib/axis2/services/Alm/alm_service.log";
 		static std::string ALM_SERVICE_HOME = "/usr/lib/axis2/services/Alm/";
 		static std::string ALM_SSD_MOD = "alm_ssd.mod";
+		static std::string ALM_MAD_MOD = "alm_mad.mod";
 		static std::string SMLOOPS_EXEC = "smloops-standalone";
 		static Log* logger = NULL;
 }
