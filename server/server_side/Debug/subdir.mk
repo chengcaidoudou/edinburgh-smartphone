@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../alm_mad_mod.cpp \
 ../alm_service_common.cpp \
 ../alm_ssd_mod.cpp \
 ../axis2_skel_Alm.cpp 
@@ -12,6 +13,7 @@ C_SRCS += \
 ../axis2_svc_skel_Alm.c 
 
 OBJS += \
+./alm_mad_mod.o \
 ./alm_service_common.o \
 ./alm_ssd_mod.o \
 ./axis2_skel_Alm.o \
@@ -21,6 +23,7 @@ C_DEPS += \
 ./axis2_svc_skel_Alm.d 
 
 CPP_DEPS += \
+./alm_mad_mod.d \
 ./alm_service_common.d \
 ./alm_ssd_mod.d \
 ./axis2_skel_Alm.d 

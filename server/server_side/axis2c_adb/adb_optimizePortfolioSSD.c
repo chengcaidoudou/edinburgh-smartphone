@@ -13,10 +13,7 @@
                 * implmentation of the optimizePortfolioSSD|http://uk.ac.ed.maths.org element
                 */
            
-#ifdef __cplusplus
-extern "C"
-{
-#endif
+
 
         struct adb_optimizePortfolioSSD
         {
@@ -1488,6 +1485,4 @@ extern "C"
            }
 
            
-#ifdef __cplusplus
-}
-#endif
+

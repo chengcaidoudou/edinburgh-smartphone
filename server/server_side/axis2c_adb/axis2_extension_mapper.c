@@ -9,13 +9,10 @@
 
         #include "axis2_extension_mapper.h"
 
+        #include "adb_OptimizePortfolioMADReturn.h"
         #include "adb_SymbolSet.h"
         #include "adb_OptimizePortfolioSSDReturn.h"
         
-#ifdef __cplusplus
-extern "C"
-{
-#endif
 
         struct adb_type
         {
@@ -103,6 +100,11 @@ extern "C"
             if (type != NULL)
             {
               
+              if (axutil_strcmp(type, "OptimizePortfolioMADReturn") == 0)
+              {
+                  return (adb_type_t*) adb_OptimizePortfolioMADReturn_create(env);
+              }
+              
               if (axutil_strcmp(type, "SymbolSet") == 0)
               {
                   return (adb_type_t*) adb_SymbolSet_create(env);
@@ -115,6 +117,11 @@ extern "C"
               
             }
 
+            
+            if (axutil_strcmp(default_type, "adb_OptimizePortfolioMADReturn") == 0)
+            {
+                return (adb_type_t*) adb_OptimizePortfolioMADReturn_create(env);
+            }
             
             if (axutil_strcmp(default_type, "adb_SymbolSet") == 0)
             {
@@ -139,6 +146,12 @@ extern "C"
             if (_object != NULL && adb_type_get_type(_object) != NULL)
             {
             
+                if (axutil_strcmp(adb_type_get_type(_object), "adb_OptimizePortfolioMADReturn") == 0)
+                {
+                    return adb_OptimizePortfolioMADReturn_free_obj(
+                    (adb_OptimizePortfolioMADReturn_t*) _object, env);
+                }
+            
                 if (axutil_strcmp(adb_type_get_type(_object), "adb_SymbolSet") == 0)
                 {
                     return adb_SymbolSet_free_obj(
@@ -153,6 +166,12 @@ extern "C"
             
             }
 
+            
+            if (axutil_strcmp(default_type, "adb_OptimizePortfolioMADReturn") == 0)
+            {
+                return adb_OptimizePortfolioMADReturn_free_obj(
+                (adb_OptimizePortfolioMADReturn_t*) _object, env);
+            }
             
             if (axutil_strcmp(default_type, "adb_SymbolSet") == 0)
             {
@@ -182,6 +201,12 @@ extern "C"
             if (_object != NULL && adb_type_get_type(_object) != NULL)
             {
             
+                if (axutil_strcmp(adb_type_get_type(_object), "adb_OptimizePortfolioMADReturn") == 0)
+                {
+                    return adb_OptimizePortfolioMADReturn_deserialize_obj(
+                    (adb_OptimizePortfolioMADReturn_t*) _object, env, dp_parent, dp_is_early_node_valid, dont_care_minoccurs);
+                }
+            
                 if (axutil_strcmp(adb_type_get_type(_object), "adb_SymbolSet") == 0)
                 {
                     return adb_SymbolSet_deserialize_obj(
@@ -196,6 +221,12 @@ extern "C"
             
             }
 
+            
+            if (axutil_strcmp(default_type, "adb_OptimizePortfolioMADReturn") == 0)
+            {
+                return adb_OptimizePortfolioMADReturn_deserialize_obj(
+                (adb_OptimizePortfolioMADReturn_t*) _object, env, dp_parent, dp_is_early_node_valid, dont_care_minoccurs);
+            }
             
             if (axutil_strcmp(default_type, "adb_SymbolSet") == 0)
             {
@@ -227,6 +258,12 @@ extern "C"
             if (_object != NULL && adb_type_get_type(_object) != NULL)
             {
                 
+                if (axutil_strcmp(adb_type_get_type(_object), "adb_OptimizePortfolioMADReturn") == 0)
+                {
+                    return adb_OptimizePortfolioMADReturn_serialize_obj(
+                    (adb_OptimizePortfolioMADReturn_t*) _object, env, om_node, om_element, tag_closed, namespaces, next_ns_index);
+                }
+            
                 if (axutil_strcmp(adb_type_get_type(_object), "adb_SymbolSet") == 0)
                 {
                     return adb_SymbolSet_serialize_obj(
@@ -241,6 +278,12 @@ extern "C"
             
             }
 
+            
+            if (axutil_strcmp(default_type, "adb_OptimizePortfolioMADReturn") == 0)
+            {
+                return adb_OptimizePortfolioMADReturn_serialize_obj(
+                (adb_OptimizePortfolioMADReturn_t*) _object, env, om_node, om_element, tag_closed, namespaces, next_ns_index);
+            }
             
             if (axutil_strcmp(default_type, "adb_SymbolSet") == 0)
             {
@@ -258,6 +301,4 @@ extern "C"
             return (axiom_node_t*)AXIS2_FAILURE;
         }
     
-#ifdef __cplusplus
-}
-#endif
+

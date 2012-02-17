@@ -13,7 +13,7 @@
 
 using namespace std;
 
-int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilename,double solutions[],double& optValue);
+int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilename,double solutions[],double& optValue,double& expReturn);
 void buildURLGoogle(const axutil_env_t* env,axis2_char_t* symbol,axutil_date_time_t* start, axutil_date_time_t* end,ostringstream& oss);
 void buildURLYahoo(const axutil_env_t* env,axis2_char_t* symbol,axutil_date_time_t* start, axutil_date_time_t* end,ostringstream& oss);
 

@@ -176,6 +176,9 @@
             adb_optimizePortfolioSSDResponse_t* ret_val1;
             adb_optimizePortfolioSSD_t* input_val1;
             
+            adb_optimizePortfolioMADResponse_t* ret_val2;
+            adb_optimizePortfolioMAD_t* input_val2;
+            
 
           svc_skeleton_wrapper = (axis2_svc_skel_Alm_t*)svc_skeleton;
           operation_ctx = axis2_msg_ctx_get_op_ctx(msg_ctx, env);
@@ -213,6 +216,43 @@
                         ret_node = adb_optimizePortfolioSSDResponse_serialize(ret_val1, env, NULL, NULL, AXIS2_TRUE, NULL, NULL);
                                    adb_optimizePortfolioSSDResponse_free(ret_val1, env);
                                    adb_optimizePortfolioSSD_free(input_val1, env);
+                                   
+
+                        return ret_node;
+                    
+
+                    /* since this has no output params it just returns NULL */                    
+                    
+
+                }
+             
+
+                if ( axutil_strcmp(op_name, "optimizePortfolioMAD") == 0 )
+                {
+
+                    
+                    input_val2 = adb_optimizePortfolioMAD_create( env);
+                        if( AXIS2_FAILURE == adb_optimizePortfolioMAD_deserialize(input_val2, env, &content_node, NULL, AXIS2_FALSE))
+                        {
+                            adb_optimizePortfolioMAD_free(input_val2, env);
+                      
+                            AXIS2_ERROR_SET(env->error, AXIS2_ERROR_DATA_ELEMENT_IS_NULL, AXIS2_FAILURE);
+                            AXIS2_LOG_ERROR( env->log, AXIS2_LOG_SI, "NULL returnted from the adb_optimizePortfolioMAD_deserialize: "
+                                        "This should be due to an invalid XML");
+                            return NULL;      
+                        }
+                        
+                        ret_val2 =  axis2_skel_Alm_optimizePortfolioMAD(env, msg_ctx,input_val2);
+                    
+                        if ( NULL == ret_val2 )
+                        {
+                            adb_optimizePortfolioMAD_free(input_val2, env);
+                            
+                            return NULL; 
+                        }
+                        ret_node = adb_optimizePortfolioMADResponse_serialize(ret_val2, env, NULL, NULL, AXIS2_TRUE, NULL, NULL);
+                                   adb_optimizePortfolioMADResponse_free(ret_val2, env);
+                                   adb_optimizePortfolioMAD_free(input_val2, env);
                                    
 
                         return ret_node;

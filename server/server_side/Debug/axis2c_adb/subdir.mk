@@ -4,22 +4,31 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../axis2c_adb/adb_OptimizePortfolioMADReturn.c \
 ../axis2c_adb/adb_OptimizePortfolioSSDReturn.c \
 ../axis2c_adb/adb_SymbolSet.c \
+../axis2c_adb/adb_optimizePortfolioMAD.c \
+../axis2c_adb/adb_optimizePortfolioMADResponse.c \
 ../axis2c_adb/adb_optimizePortfolioSSD.c \
 ../axis2c_adb/adb_optimizePortfolioSSDResponse.c \
 ../axis2c_adb/axis2_extension_mapper.c 
 
 OBJS += \
+./axis2c_adb/adb_OptimizePortfolioMADReturn.o \
 ./axis2c_adb/adb_OptimizePortfolioSSDReturn.o \
 ./axis2c_adb/adb_SymbolSet.o \
+./axis2c_adb/adb_optimizePortfolioMAD.o \
+./axis2c_adb/adb_optimizePortfolioMADResponse.o \
 ./axis2c_adb/adb_optimizePortfolioSSD.o \
 ./axis2c_adb/adb_optimizePortfolioSSDResponse.o \
 ./axis2c_adb/axis2_extension_mapper.o 
 
 C_DEPS += \
+./axis2c_adb/adb_OptimizePortfolioMADReturn.d \
 ./axis2c_adb/adb_OptimizePortfolioSSDReturn.d \
 ./axis2c_adb/adb_SymbolSet.d \
+./axis2c_adb/adb_optimizePortfolioMAD.d \
+./axis2c_adb/adb_optimizePortfolioMADResponse.d \
 ./axis2c_adb/adb_optimizePortfolioSSD.d \
 ./axis2c_adb/adb_optimizePortfolioSSDResponse.d \
 ./axis2c_adb/axis2_extension_mapper.d 

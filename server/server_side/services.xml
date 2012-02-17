@@ -8,4 +8,7 @@
     <operation name="optimizePortfolioSSD" mep="http://www.w3.org/ns/wsdl/in-out">
         <parameter name="wsamapping">urn:optimizePortfolioSSD</parameter>
     </operation>
+    <operation name="optimizePortfolioMAD" mep="http://www.w3.org/ns/wsdl/in-out">
+        <parameter name="wsamapping">urn:optimizePortfolioMAD</parameter>
+    </operation>
 </service>

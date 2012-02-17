@@ -14,8 +14,8 @@
 #include "AlmDataWriter.h"
 #include "alm_service_common.h"
 
-int calculateOptimizedPortfolioSSD(axutil_array_list_t* symbols,axis2_char_t* benchmark,
-				axutil_date_time_t* start,axutil_date_time_t* end,const axutil_env_t* env,double solutions[],double& optValue)
+int calculateOptimizedPortfolioSSD(const axutil_env_t* env,axutil_array_list_t* symbols,axis2_char_t* benchmark,axutil_date_time_t* start,axutil_date_time_t* end,
+				double solutions[],double& optValue)
 {
 	int numSymbols = axutil_array_list_size(symbols,env);
 	ostringstream oss(ostringstream::out);
@@ -45,8 +45,9 @@ int calculateOptimizedPortfolioSSD(axutil_array_list_t* symbols,axis2_char_t* be
 	oss<<GlobalVariables::ALM_SSD_MOD<<"_"<<getpid()<<".dat";
 	string dataFilename = oss.str();
 	oss.str("");
-	writer->writeSMLDataFile(dataFilename);
-	int retCode = executeSMLOOPS(env,GlobalVariables::ALM_SSD_MOD,dataFilename,solutions,optValue);
+	writer->writeSMLDataFileSSD(dataFilename);
+	double nouse = -1;
+	int retCode = executeSMLOOPS(env,GlobalVariables::ALM_SSD_MOD,dataFilename,solutions,optValue,nouse);
 	AXIS2_LOG_INFO(env->log,"returned from executeSMLOOPS");
 
 	return retCode;

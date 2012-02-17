@@ -12,9 +12,7 @@
 #include "DataRetriever.h"
 #include "AlmDataWriter.h"
 
-
-
-int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilename,double solutions[],double& optValue)
+int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilename,double solutions[],double& optValue, double& expReturn)
 {
 	int retCode = 0;
 	//oss<<"mpiexec -np 1 ";  //-- mpiexec not exiting..
@@ -49,6 +47,16 @@ int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilenam
 					retCode = 1; //infeasible or unbounded
 					optValue = 0;
 					AXIS2_LOG_INFO(env->log,"problem infeasible or unbounded");
+				}
+				else if(string::npos!=line.find("root_E"))
+				{
+					AXIS2_LOG_INFO(env->log,"expected return line - [%s]",line.c_str());
+					int start = line.find("Value")+6;
+					int end = line.find("Reduced");
+					string value = line.substr(start,end-start);
+					AXIS2_LOG_INFO(env->log,"value - [%s]",value.c_str());
+					expReturn = atof(value.c_str());
+					AXIS2_LOG_INFO(env->log,"setting expReturn to [%f]",expReturn);
 				}
 				else if(string::npos!=line.find("x_hold"))
 				{

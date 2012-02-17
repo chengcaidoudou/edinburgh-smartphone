@@ -19,6 +19,7 @@
 #include "AlmDataWriter.h"
 #include "alm_service_common.h"
 #include "alm_ssd_mod.h"
+#include "alm_mad_mod.h"
 
 //#ifdef __cplusplus
 //extern "C"
@@ -58,7 +59,7 @@
 
 			double solutions[numSymbols];
 			double optValue;
-			int retCode = calculateOptimizedPortfolioSSD(symbols,benchmark,start,end,env,solutions,optValue);
+			int retCode = calculateOptimizedPortfolioSSD(env,symbols,benchmark,start,end,solutions,optValue);
 
 			AXIS2_LOG_INFO(env->log,"Setting Response ========================");
 			adb_optimizePortfolioSSDResponse_t* ssdResponse = adb_optimizePortfolioSSDResponse_create(env);
@@ -75,6 +76,54 @@
 			AXIS2_LOG_INFO(env->log,"Setting Response DONE =====================");
 			return ssdResponse;
         }
+
+        /**
+		* auto generated function definition signature
+		* for "optimizePortfolioMAD|http://uk.ac.ed.maths.org" operation.
+		* @param env environment ( mandatory)* @param MessageContext the outmessage context
+		* @param _optimizePortfolioMAD of the adb_optimizePortfolioMAD_t*
+		*
+		* @return adb_optimizePortfolioMADResponse_t*
+		*/
+	   adb_optimizePortfolioMADResponse_t* axis2_skel_Alm_optimizePortfolioMAD(const axutil_env_t *env , axis2_msg_ctx_t *msg_ctx,
+											 adb_optimizePortfolioMAD_t* _optimizePortfolioMAD )
+	   {
+		   	AXIS2_LOG_INFO(env->log,"Logging Request ================[%d]",getpid());
+			adb_SymbolSet_t* symbolSet = adb_optimizePortfolioMAD_get_args0(_optimizePortfolioMAD,env);
+			axutil_date_time_t* start = adb_optimizePortfolioMAD_get_args1(_optimizePortfolioMAD,env);
+			axutil_date_time_t* end = adb_optimizePortfolioMAD_get_args2(_optimizePortfolioMAD,env);
+			axutil_array_list_t* symbols = adb_SymbolSet_get_symbols(symbolSet,env);
+
+			int numSymbols = axutil_array_list_size(symbols,env);
+			adb_optimizePortfolioMAD_free(_optimizePortfolioMAD,env);
+			for(int i=0;i<numSymbols;i++)
+			{
+				axis2_char_t* symbol = (axis2_char_t*)axutil_array_list_get(symbols,env,i);
+				AXIS2_LOG_INFO(env->log,"symbols[%d]=[%s]",i,symbol);
+			}
+			AXIS2_LOG_INFO(env->log,"Logging Request DONE ====================");
+
+			double solutions[numSymbols];
+			double optValue;
+			double expReturn;
+			int retCode = calculateOptimizedPortfolioMAD(env,symbols,start,end,solutions,expReturn,optValue);
+
+			AXIS2_LOG_INFO(env->log,"Setting Response ========================");
+			adb_optimizePortfolioMADResponse_t* madResponse = adb_optimizePortfolioMADResponse_create(env);
+			adb_OptimizePortfolioMADReturn_t*  MADReturn = adb_OptimizePortfolioMADReturn_create(env);
+			AXIS2_LOG_INFO(env->log,"created MADresponse and MADreturn ");
+			for(int i=0;i<numSymbols;i++)
+			{
+				adb_OptimizePortfolioMADReturn_add_protfolioRatio(MADReturn,env,solutions[i]);
+				AXIS2_LOG_INFO(env->log,"solutions[%d]=[%f]",i,solutions[i]);
+			}
+			adb_OptimizePortfolioMADReturn_set_resultCode(MADReturn,env,retCode);
+			adb_OptimizePortfolioMADReturn_set_expReturn(MADReturn,env,expReturn);
+			adb_optimizePortfolioMADResponse_set_return(madResponse,env,MADReturn);
+			AXIS2_LOG_INFO(env->log,"Setting Response DONE =====================");
+			//return ssdResponse;
+			return madResponse;
+	   }
 
 //#ifdef __cplusplus
 //}

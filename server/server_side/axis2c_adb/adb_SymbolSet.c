@@ -15,10 +15,7 @@
                  * Namespace URI = http://uk.ac.ed.maths.org/xsd
                  * Namespace Prefix = ns1
                  */
-#ifdef __cplusplus
-extern "C"
-{
-#endif
+           
 
 
         struct adb_SymbolSet
@@ -1030,6 +1027,5 @@ extern "C"
 
            }
 
-#ifdef __cplusplus
-}
-#endif
+           
+

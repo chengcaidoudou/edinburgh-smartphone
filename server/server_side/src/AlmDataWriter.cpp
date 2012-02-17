@@ -46,6 +46,11 @@ void AlmDataWriter::addBenchmarkReturnData(string symbol,vector<double> returns)
 	}
 }
 
+void AlmDataWriter::setoReturnRatio(double ratio)
+{
+	this->returnRatio = ratio;
+}
+
 void AlmDataWriter::calculateHBenchMark()
 {
 	this->bReturnsNoDup = this->bReturnsOrignal;
@@ -71,49 +76,91 @@ void AlmDataWriter::calculateHBenchMark()
 	Log::DEBUG("bReturnsNoDup [%d] == bhReturns [%d]",this->bReturnsNoDup.size(),this->bhReturns.size());
 
 }
-void AlmDataWriter::prepareDataToWrite()
+
+void AlmDataWriter::writeSMLDataFileSSD(string filename)
 {
-	this->numNodes = this->returnsList.front().size() + 1;
-	ProbabilityPolicy::getEquallyLikelyProbabilityVector(this->numNodes-1,probs);
-	if(this->returnsList.front().size()!=probs.size())
-	{
-		Log::ERROR("-- - probability vector size doesn't match number of scenarios.....");
-	}
-	Log::DEBUG("number of nodes is [%d]",this->numNodes);
+	this->calcNumNodes();
+	this->calculateProbobility();
 	this->calculateHBenchMark();
-}
-void AlmDataWriter::writeSMLDataFile(string filename)
-{
-	this->prepareDataToWrite();
 	string abs_filename = GlobalVariables::ALM_SERVICE_HOME+filename;
 	Log::DEBUG("writing sml data file to [%s]",abs_filename.c_str());
 	ofstream dataStream(abs_filename.c_str());
+
+	this->writeT(dataStream);
+	this->writeNodes(dataStream);
+	this->writeParent(dataStream);
+	this->writeProbs(dataStream);
+	this->writeAsset(dataStream);
+	this->writeReturn(dataStream);
+	this->writeBenchmark(dataStream);
+	dataStream.close();
+	Log::DEBUG("LOG file data file [%s]",abs_filename.c_str());
+}
+
+void AlmDataWriter::writeSMLDataFileMAD(string filename)
+{
+	this->calcNumNodes();
+	this->calculateProbobility();
+	string abs_filename = GlobalVariables::ALM_SERVICE_HOME+filename;
+	Log::DEBUG("writing sml data file to [%s]",abs_filename.c_str());
+	ofstream dataStream(abs_filename.c_str());
+	this->writeT(dataStream);
+	this->writeReturnRatio(dataStream);
+	this->writeNodes(dataStream);
+	this->writeParent(dataStream);
+	this->writeProbs(dataStream);
+	this->writeAsset(dataStream);
+	this->writeReturn(dataStream);
+	dataStream.close();
+	Log::DEBUG("LOG file data file [%s]",abs_filename.c_str());
+}
+
+void AlmDataWriter::writeT(ofstream& dataStream)
+{
 	dataStream<<"param T := 1;"<<endl;
+}
+void AlmDataWriter::writeReturnRatio(ofstream& dataStream)
+{
+	dataStream<<"param ReturnRatio := "<<this->returnRatio<<";"<<endl;
+}
+void AlmDataWriter::writeNodes(ofstream& dataStream)
+{
 	dataStream<<"set NODES := ";
 	for(int i=1;i<=this->numNodes;i++)
 	{
 		dataStream<<i<<" ";
 	}
 	dataStream<<";"<<endl;
+}
+void AlmDataWriter::writeParent(ofstream& dataStream)
+{
 	dataStream<<"param: Parent := 1 \"null\""<<endl;
 	for(int i=2;i<=this->numNodes;i++)
 	{
 		dataStream<<"\t\t\t"<<i<<" "<<"1"<<endl;
 	}
 	dataStream<<"\t\t\t"<<";"<<endl;
+}
+void AlmDataWriter::writeProbs(ofstream& dataStream)
+{
 	dataStream<<"param: Probs := 1  1"<<endl;
 	for(int i=2;i<=this->numNodes;i++)
 	{
 		dataStream<<"\t\t\t"<<i<<" "<<probs.at(i-2)<<endl;
 	}
-	dataStream<<";"<<endl;
+	dataStream<<"\t\t\t;"<<endl;
+}
+void AlmDataWriter::writeAsset(ofstream& dataStream)
+{
 	dataStream<<"set ASSETS := ";
 	for(vector<string>::iterator it=this->symbols.begin();it!=this->symbols.end();it++)
 	{
 		dataStream<<(*it)<<" ";
 	}
 	dataStream<<";"<<endl;
-
+}
+void AlmDataWriter::writeReturn(ofstream& dataStream)
+{
 	dataStream<<"param: Return := "<<endl;
 	vector<string>::iterator it_sname = this->symbols.begin();
 	vector<vector<double> >::iterator it_returns = this->returnsList.begin();
@@ -131,7 +178,10 @@ void AlmDataWriter::writeSMLDataFile(string filename)
 		}
 	}
 	dataStream<<"\t\t\t"<<";"<<endl;
+}
 
+void AlmDataWriter::writeBenchmark(ofstream& dataStream)
+{
 	dataStream<<"set BENCHMARK := ";
 	for(int i=1;i<=this->bReturnsNoDup.size();i++)
 	{
@@ -155,7 +205,19 @@ void AlmDataWriter::writeSMLDataFile(string filename)
 		benmkIndex++;
 	}
 	dataStream<<"\t\t\t"<<";"<<endl;
+}
 
-	dataStream.close();
-	Log::DEBUG("LOG file data file [%s]",abs_filename.c_str());
+void AlmDataWriter::calculateProbobility()
+{
+	ProbabilityPolicy::getEquallyLikelyProbabilityVector(this->numNodes-1,probs);
+	if(this->returnsList.front().size()!=probs.size())
+	{
+		Log::ERROR("-- - probability vector size doesn't match number of scenarios.....");
+	}
+}
+
+void AlmDataWriter::calcNumNodes()
+{
+	this->numNodes = this->returnsList.front().size() + 1;
+	Log::DEBUG("number of nodes is [%d]",this->numNodes);
 }

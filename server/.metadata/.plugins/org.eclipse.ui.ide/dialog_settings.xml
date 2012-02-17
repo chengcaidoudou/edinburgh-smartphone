@@ -2,15 +2,15 @@
 <section name="Workbench">
 	<section name="BasicNewProjectResourceWizard">
 	</section>
-	<section name="NewWizardAction">
-	</section>
 	<section name="CleanDialogSettings">
 		<item value="565" key="DIALOG_WIDTH"/>
 		<item value="true" key="BUILD_NOW"/>
-		<item value="true" key="BUILD_ALL"/>
 		<item value="309" key="DIALOG_Y_ORIGIN"/>
-		<item value="2279" key="DIALOG_X_ORIGIN"/>
+		<item value="true" key="BUILD_ALL"/>
 		<item value="475" key="DIALOG_HEIGHT"/>
+		<item value="2279" key="DIALOG_X_ORIGIN"/>
 		<item value="false" key="TOGGLE_SELECTED"/>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>

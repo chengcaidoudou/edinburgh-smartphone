@@ -13,10 +13,7 @@
                 * implmentation of the optimizePortfolioSSDResponse|http://uk.ac.ed.maths.org element
                 */
            
-#ifdef __cplusplus
-extern "C"
-{
-#endif
+
 
         struct adb_optimizePortfolioSSDResponse
         {
@@ -612,9 +609,6 @@ extern "C"
            {
                return adb_optimizePortfolioSSDResponse_reset_return(_optimizePortfolioSSDResponse, env);
            }
-           
-#ifdef __cplusplus
-}
-#endif
 
+           
 

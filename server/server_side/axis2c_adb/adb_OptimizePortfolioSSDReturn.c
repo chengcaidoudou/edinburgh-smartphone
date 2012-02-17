@@ -16,10 +16,7 @@
                  * Namespace Prefix = ns1
                  */
            
-#ifdef __cplusplus
-extern "C"
-{
-#endif
+
 
         struct adb_OptimizePortfolioSSDReturn
         {
@@ -2198,8 +2195,5 @@ extern "C"
                return adb_OptimizePortfolioSSDReturn_reset_resultCode(_OptimizePortfolioSSDReturn, env);
            }
 
-#ifdef __cplusplus
-}
-#endif
            
 

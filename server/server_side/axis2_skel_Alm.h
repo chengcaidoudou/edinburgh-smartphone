@@ -25,6 +25,10 @@
     
      #include "adb_optimizePortfolioSSDResponse.h"
     
+     #include "adb_optimizePortfolioMAD.h"
+    
+     #include "adb_optimizePortfolioMADResponse.h"
+    
 
 	#ifdef __cplusplus
 	extern "C" {
@@ -47,6 +51,21 @@
 
      
 
+		 
+        /**
+         * auto generated function declaration
+         * for "optimizePortfolioMAD|http://uk.ac.ed.maths.org" operation.
+         * @param env environment ( mandatory)* @param MessageContext the outmessage context
+         * @param _optimizePortfolioMAD of the adb_optimizePortfolioMAD_t*
+         *
+         * @return adb_optimizePortfolioMADResponse_t*
+         */
+        adb_optimizePortfolioMADResponse_t* axis2_skel_Alm_optimizePortfolioMAD(const axutil_env_t *env,axis2_msg_ctx_t *msg_ctx,
+                                              adb_optimizePortfolioMAD_t* _optimizePortfolioMAD);
+
+
+     
+
     /** we have to reserve some error codes for adb and for custom messages */
     #define AXIS2_SKEL_ALM_ERROR_CODES_START (AXIS2_ERROR_LAST + 2500)
 
@@ -61,4 +80,5 @@
 	}
 	#endif
     
+
 #endif /* AXIS2_SKEL_ALM_H_ */

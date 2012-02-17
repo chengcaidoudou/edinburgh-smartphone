@@ -15,6 +15,14 @@
                     <xs:element minOccurs="0" name="resultCode" type="xs:int"/>
                 </xs:sequence>
             </xs:complexType>
+            <xs:complexType name="OptimizePortfolioMADReturn">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="expReturn" type="xs:double"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="portfolioRatio" nillable="true" type="xs:double"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="protfolioRatio" nillable="true" type="xs:double"/>
+                    <xs:element minOccurs="0" name="resultCode" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
         </xs:schema>
         <xs:schema xmlns:ax22="http://uk.ac.ed.maths.org/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://uk.ac.ed.maths.org">
             <xs:import namespace="http://uk.ac.ed.maths.org/xsd"/>
@@ -35,6 +43,22 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
+            <xs:element name="optimizePortfolioMAD">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="args0" nillable="true" type="ax21:SymbolSet"/>
+                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:date"/>
+                        <xs:element minOccurs="0" name="args2" nillable="true" type="xs:date"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="optimizePortfolioMADResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:OptimizePortfolioMADReturn"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
         </xs:schema>
     </wsdl:types>
     <wsdl:message name="optimizePortfolioSSDRequest">
@@ -43,16 +67,35 @@
     <wsdl:message name="optimizePortfolioSSDResponse">
         <wsdl:part name="parameters" element="ns:optimizePortfolioSSDResponse"/>
     </wsdl:message>
+    <wsdl:message name="optimizePortfolioMADRequest">
+        <wsdl:part name="parameters" element="ns:optimizePortfolioMAD"/>
+    </wsdl:message>
+    <wsdl:message name="optimizePortfolioMADResponse">
+        <wsdl:part name="parameters" element="ns:optimizePortfolioMADResponse"/>
+    </wsdl:message>
     <wsdl:portType name="AlmPortType">
         <wsdl:operation name="optimizePortfolioSSD">
             <wsdl:input message="ns:optimizePortfolioSSDRequest" wsaw:Action="urn:optimizePortfolioSSD"/>
             <wsdl:output message="ns:optimizePortfolioSSDResponse" wsaw:Action="urn:optimizePortfolioSSDResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="optimizePortfolioMAD">
+            <wsdl:input message="ns:optimizePortfolioMADRequest" wsaw:Action="urn:optimizePortfolioMAD"/>
+            <wsdl:output message="ns:optimizePortfolioMADResponse" wsaw:Action="urn:optimizePortfolioMADResponse"/>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="AlmSoap11Binding" type="ns:AlmPortType">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <wsdl:operation name="optimizePortfolioSSD">
             <soap:operation soapAction="urn:optimizePortfolioSSD" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="optimizePortfolioMAD">
+            <soap:operation soapAction="urn:optimizePortfolioMAD" style="document"/>
             <wsdl:input>
                 <soap:body use="literal"/>
             </wsdl:input>
@@ -72,6 +115,15 @@
                 <soap12:body use="literal"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="optimizePortfolioMAD">
+            <soap12:operation soapAction="urn:optimizePortfolioMAD" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
     </wsdl:binding>
     <wsdl:binding name="AlmHttpBinding" type="ns:AlmPortType">
         <http:binding verb="POST"/>
@@ -84,16 +136,25 @@
                 <mime:content type="text/xml" part="parameters"/>
             </wsdl:output>
         </wsdl:operation>
+        <wsdl:operation name="optimizePortfolioMAD">
+            <http:operation location="optimizePortfolioMAD"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="Alm">
         <wsdl:port name="AlmHttpSoap11Endpoint" binding="ns:AlmSoap11Binding">
-            <soap:address location="http://127.0.0.1:80/axis2/services/Alm"/>
+            <soap:address location="http://localhost:8080/axis2/services/Alm"/>
         </wsdl:port>
         <wsdl:port name="AlmHttpSoap12Endpoint" binding="ns:AlmSoap12Binding">
-            <soap12:address location="http://127.0.0.1:80/axis2/services/Alm"/>
+            <soap12:address location="http://localhost:8080/axis2/services/Alm"/>
         </wsdl:port>
         <wsdl:port name="AlmHttpEndpoint" binding="ns:AlmHttpBinding">
-            <http:address location="http://127.0.0.1:80/axis2/services/Alm"/>
+            <http:address location="http://localhost:8080/axis2/services/Alm"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

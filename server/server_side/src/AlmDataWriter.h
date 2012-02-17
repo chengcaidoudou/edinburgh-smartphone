@@ -20,7 +20,9 @@ public:
 
 	void addReturnData(string symbol,vector<double> returns);
 	void addBenchmarkReturnData(string symbol,vector<double> returns);
-	void writeSMLDataFile(string filename);
+	void setoReturnRatio(double ratio);
+	void writeSMLDataFileSSD(string filename);
+	void writeSMLDataFileMAD(string filename);
 
 private:
 	vector<string> symbols;
@@ -31,9 +33,19 @@ private:
 	vector<double> bReturnsNoDup;
 	vector<double> bhReturns;
 	int numNodes;
+	double returnRatio;
 
-	void prepareDataToWrite();
 	void calculateHBenchMark();
+	void writeT(ofstream&);
+	void writeReturnRatio(ofstream&);
+	void writeNodes(ofstream&);
+	void writeParent(ofstream&);
+	void writeProbs(ofstream&);
+	void writeAsset(ofstream&);
+	void writeReturn(ofstream&);
+	void writeBenchmark(ofstream&);
+	void calculateProbobility();
+	void calcNumNodes();
 };
 
 #endif /* ALMDATAWRITER_H_ */
