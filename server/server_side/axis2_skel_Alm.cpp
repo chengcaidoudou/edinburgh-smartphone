@@ -90,8 +90,9 @@
 	   {
 		   	AXIS2_LOG_INFO(env->log,"Logging Request ================[%d]",getpid());
 			adb_SymbolSet_t* symbolSet = adb_optimizePortfolioMAD_get_args0(_optimizePortfolioMAD,env);
-			axutil_date_time_t* start = adb_optimizePortfolioMAD_get_args1(_optimizePortfolioMAD,env);
-			axutil_date_time_t* end = adb_optimizePortfolioMAD_get_args2(_optimizePortfolioMAD,env);
+			double returnRatio = adb_optimizePortfolioMAD_get_args1(_optimizePortfolioMAD,env);
+			axutil_date_time_t* start = adb_optimizePortfolioMAD_get_args2(_optimizePortfolioMAD,env);
+			axutil_date_time_t* end = adb_optimizePortfolioMAD_get_args3(_optimizePortfolioMAD,env);
 			axutil_array_list_t* symbols = adb_SymbolSet_get_symbols(symbolSet,env);
 
 			int numSymbols = axutil_array_list_size(symbols,env);
@@ -106,7 +107,7 @@
 			double solutions[numSymbols];
 			double optValue;
 			double expReturn;
-			int retCode = calculateOptimizedPortfolioMAD(env,symbols,start,end,solutions,expReturn,optValue);
+			int retCode = calculateOptimizedPortfolioMAD(env,symbols,returnRatio,start,end,solutions,expReturn,optValue);
 
 			AXIS2_LOG_INFO(env->log,"Setting Response ========================");
 			adb_optimizePortfolioMADResponse_t* madResponse = adb_optimizePortfolioMADResponse_create(env);

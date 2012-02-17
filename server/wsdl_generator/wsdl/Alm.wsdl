@@ -47,8 +47,9 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element minOccurs="0" name="args0" nillable="true" type="ax21:SymbolSet"/>
-                        <xs:element minOccurs="0" name="args1" nillable="true" type="xs:date"/>
+                        <xs:element minOccurs="0" name="args1" type="xs:double"/>
                         <xs:element minOccurs="0" name="args2" nillable="true" type="xs:date"/>
+                        <xs:element minOccurs="0" name="args3" nillable="true" type="xs:date"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>

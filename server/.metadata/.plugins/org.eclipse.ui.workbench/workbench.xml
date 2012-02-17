@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.amalgam.discovery.modeling.toolbars.sampleToolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
@@ -17,14 +17,14 @@
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
 <coolItem id="org.eclipse.mylyn.java.actionSet.browsing" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor" itemType="typeToolBarContribution" x="229" y="30"/>
 <coolItem id="org.eclipse.wst.wsdl.ui.internal.WSDLEditor" itemType="typeToolBarContribution" x="229" y="30"/>
@@ -37,10 +37,66 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="axis2_skel_Alm.cpp" partName="axis2_skel_Alm.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/axis2_skel_Alm.cpp" title="axis2_skel_Alm.cpp" tooltip="server_side/axis2_skel_Alm.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2_skel_Alm.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4759" selectionTopPixel="1402"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_optimizePortfolioMAD.c" partName="adb_optimizePortfolioMAD.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_optimizePortfolioMAD.c" title="adb_optimizePortfolioMAD.c" tooltip="server_side/axis2c_adb/adb_optimizePortfolioMAD.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_optimizePortfolioMAD.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2262" selectionTopPixel="735"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.cpp" partName="alm_mad_mod.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/alm_mad_mod.cpp" title="alm_mad_mod.cpp" tooltip="server_side/alm_mad_mod.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/alm_mad_mod.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="294" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.h" partName="alm_mad_mod.h" path="/home/s0965328/workspace-smartphone/server/server_side/alm_mad_mod.h" title="alm_mad_mod.h" tooltip="server_side/alm_mad_mod.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/alm_mad_mod.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="265" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_OptimizePortfolioMADReturn.c" partName="adb_OptimizePortfolioMADReturn.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c" title="adb_OptimizePortfolioMADReturn.c" tooltip="server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="2690" selectionTopPixel="1010"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_OptimizePortfolioSSDReturn.c" partName="adb_OptimizePortfolioSSDReturn.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c" title="adb_OptimizePortfolioSSDReturn.c" tooltip="server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2705" selectionTopPixel="1604"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_SymbolSet.c" partName="adb_SymbolSet.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_SymbolSet.c" title="adb_SymbolSet.c" tooltip="server_side/axis2c_adb/adb_SymbolSet.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_SymbolSet.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1576" selectionTopPixel="535"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_optimizePortfolioMADResponse.c" partName="adb_optimizePortfolioMADResponse.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c" title="adb_optimizePortfolioMADResponse.c" tooltip="server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2026" selectionTopPixel="445"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_optimizePortfolioSSD.c" partName="adb_optimizePortfolioSSD.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_optimizePortfolioSSD.c" title="adb_optimizePortfolioSSD.c" tooltip="server_side/axis2c_adb/adb_optimizePortfolioSSD.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_optimizePortfolioSSD.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2138" selectionTopPixel="535"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="adb_optimizePortfolioSSDResponse.c" partName="adb_optimizePortfolioSSDResponse.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/adb_optimizePortfolioSSDResponse.c" title="adb_optimizePortfolioSSDResponse.c" tooltip="server_side/axis2c_adb/adb_optimizePortfolioSSDResponse.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/adb_optimizePortfolioSSDResponse.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1967" selectionTopPixel="445"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="axis2_extension_mapper.c" partName="axis2_extension_mapper.c" path="/home/s0965328/workspace-smartphone/server/server_side/axis2c_adb/axis2_extension_mapper.c" title="axis2_extension_mapper.c" tooltip="server_side/axis2c_adb/axis2_extension_mapper.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/axis2c_adb/axis2_extension_mapper.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11360" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -57,8 +113,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.resourceField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -77,7 +133,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="&lt;C/C++&gt;">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="&lt;C/C++&gt;">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor descriptor="org.eclipse.jdt.ui.JavaPerspective" id="&lt;Java&gt;" label="&lt;Java&gt;"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -312,7 +368,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@728907" ratio="0.6894619" ratioLeft="615" ratioRight="277" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
@@ -429,7 +485,67 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/wsdl_generator/src/org/maths/ed/ac/uk/Alm.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2_skel_Alm.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_mad_mod.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_mad_mod.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_SymbolSet.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMAD.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioSSD.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioSSDResponse.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/axis2_extension_mapper.c"/>
+</editors>
+<item historyLabel="Alm.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="axis2_skel_Alm.cpp" index="1">
+<position info="not_deleted" x="3859" y="34"/>
+</item>
+<item historyLabel="axis2_skel_Alm.cpp" index="1">
+<position info="not_deleted" x="4759" y="0"/>
+</item>
+<item historyLabel="alm_mad_mod.cpp" index="2">
+<position info="not_deleted" x="294" y="0"/>
+</item>
+<item historyLabel="alm_mad_mod.h" index="3">
+<position info="not_deleted" x="265" y="0"/>
+</item>
+<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="4">
+<position info="not_deleted" x="2676" y="0"/>
+</item>
+<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="4">
+<position info="not_deleted" x="2690" y="15"/>
+</item>
+<item historyLabel="adb_OptimizePortfolioSSDReturn.c" index="5">
+<position info="not_deleted" x="2705" y="0"/>
+</item>
+<item historyLabel="adb_SymbolSet.c" index="6">
+<position info="not_deleted" x="1576" y="0"/>
+</item>
+<item historyLabel="adb_optimizePortfolioMAD.c" index="7">
+<position info="not_deleted" x="2262" y="0"/>
+</item>
+<item historyLabel="adb_optimizePortfolioMADResponse.c" index="8">
+<position info="not_deleted" x="2026" y="0"/>
+</item>
+<item historyLabel="adb_optimizePortfolioSSD.c" index="9">
+<position info="not_deleted" x="2138" y="0"/>
+</item>
+<item historyLabel="adb_optimizePortfolioSSDResponse.c" index="10">
+<position info="not_deleted" x="1967" y="0"/>
+</item>
+<item active="true" historyLabel="axis2_extension_mapper.c" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -452,39 +568,6 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_ssd_mod.h" tooltip="server_side/alm_ssd_mod.h">
-<persistable path="/server_side/alm_ssd_mod.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_ssd_mod.cpp" tooltip="server_side/alm_ssd_mod.cpp">
-<persistable path="/server_side/alm_ssd_mod.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.h" tooltip="server_side/alm_mad_mod.h">
-<persistable path="/server_side/alm_mad_mod.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.cpp" tooltip="server_side/alm_mad_mod.cpp">
-<persistable path="/server_side/alm_mad_mod.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="axis2_skel_Alm.cpp" tooltip="server_side/axis2_skel_Alm.cpp">
-<persistable path="/server_side/axis2_skel_Alm.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DataRetriever.cpp" tooltip="server_side/src/DataRetriever.cpp">
-<persistable path="/server_side/src/DataRetriever.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AlmDataWriter.cpp" tooltip="server_side/src/AlmDataWriter.cpp">
-<persistable path="/server_side/src/AlmDataWriter.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GlobalVariables.h" tooltip="server_side/src/GlobalVariables.h">
-<persistable path="/server_side/src/GlobalVariables.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_service_common.h" tooltip="server_side/alm_service_common.h">
-<persistable path="/server_side/alm_service_common.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_service_common.cpp" tooltip="server_side/alm_service_common.cpp">
-<persistable path="/server_side/alm_service_common.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AlmDataWriter.h" tooltip="server_side/src/AlmDataWriter.h">
-<persistable path="/server_side/src/AlmDataWriter.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="axis2_extension_mapper.c" tooltip="server_side/axis2c_adb/axis2_extension_mapper.c">
 <persistable path="/server_side/axis2c_adb/axis2_extension_mapper.c"/>
 </file>
@@ -496,6 +579,39 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="adb_optimizePortfolioMADResponse.c" tooltip="server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c">
 <persistable path="/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="adb_SymbolSet.c" tooltip="server_side/axis2c_adb/adb_SymbolSet.c">
+<persistable path="/server_side/axis2c_adb/adb_SymbolSet.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="adb_OptimizePortfolioSSDReturn.c" tooltip="server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c">
+<persistable path="/server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="adb_OptimizePortfolioMADReturn.c" tooltip="server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c">
+<persistable path="/server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.h" tooltip="server_side/alm_mad_mod.h">
+<persistable path="/server_side/alm_mad_mod.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.cpp" tooltip="server_side/alm_mad_mod.cpp">
+<persistable path="/server_side/alm_mad_mod.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="adb_optimizePortfolioMAD.c" tooltip="server_side/axis2c_adb/adb_optimizePortfolioMAD.c">
+<persistable path="/server_side/axis2c_adb/adb_optimizePortfolioMAD.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="axis2_skel_Alm.cpp" tooltip="server_side/axis2_skel_Alm.cpp">
+<persistable path="/server_side/axis2_skel_Alm.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Alm.java" tooltip="wsdl_generator/src/org/maths/ed/ac/uk/Alm.java">
+<persistable path="/wsdl_generator/src/org/maths/ed/ac/uk/Alm.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_ssd_mod.h" tooltip="server_side/alm_ssd_mod.h">
+<persistable path="/server_side/alm_ssd_mod.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_ssd_mod.cpp" tooltip="server_side/alm_ssd_mod.cpp">
+<persistable path="/server_side/alm_ssd_mod.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DataRetriever.cpp" tooltip="server_side/src/DataRetriever.cpp">
+<persistable path="/server_side/src/DataRetriever.cpp"/>
 </file>
 </mruList>
 </workbench>

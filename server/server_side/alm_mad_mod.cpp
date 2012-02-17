@@ -14,7 +14,7 @@
 #include "AlmDataWriter.h"
 #include "alm_service_common.h"
 
-int calculateOptimizedPortfolioMAD(const axutil_env_t* env,axutil_array_list_t* symbols,axutil_date_time_t* start,axutil_date_time_t* end,
+int calculateOptimizedPortfolioMAD(const axutil_env_t* env,axutil_array_list_t* symbols,double returnRatio,axutil_date_time_t* start,axutil_date_time_t* end,
 		double solutions[],double& expReturn,double& optValue)
 {
 	int numSymbols = axutil_array_list_size(symbols,env);
@@ -36,7 +36,7 @@ int calculateOptimizedPortfolioMAD(const axutil_env_t* env,axutil_array_list_t* 
 	oss<<GlobalVariables::ALM_MAD_MOD<<"_"<<getpid()<<".dat";
 	string dataFilename = oss.str();
 	oss.str("");
-	writer->setoReturnRatio(1.01);
+	writer->setoReturnRatio(returnRatio);
 	writer->writeSMLDataFileMAD(dataFilename);
 
 	int retCode = executeSMLOOPS(env,GlobalVariables::ALM_MAD_MOD,dataFilename,solutions,optValue,expReturn);
