@@ -9,7 +9,7 @@ public abstract class OptimizePortfolioSSDReturn {
 	public abstract void setPortfolioRatio(double[] ratio);
 	public abstract void setExpReturn(double ret);
 	public abstract int getResultCode();
-	public abstract double[] getProtfolioRatio();
+	public abstract double[] getPortfolioRatio();
 	public abstract double getExpReturn();
 	
 }

@@ -41,7 +41,14 @@ int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilenam
 			{
 				line = buffer;
 				//AXIS2_LOG_INFO(env->log,"executing smloops [%s]",buffer);
-				if(string::npos!=line.find("Exit"))
+				if(string::npos!=line.find("Excess Iters Limit"))
+				{
+					AXIS2_LOG_INFO(env->log,"object value line - [%s]",line.c_str());
+					retCode = 2; //iteration limit excess
+					optValue = 0;
+					AXIS2_LOG_INFO(env->log,"problem excess iteration limit");
+				}
+				else if(string::npos!=line.find("Exit"))
 				{
 					AXIS2_LOG_INFO(env->log,"object value line - [%s]",line.c_str());
 					retCode = 1; //infeasible or unbounded
@@ -68,7 +75,7 @@ int executeSMLOOPS(const axutil_env_t* env,string modFilename,string dataFilenam
 					double x_val = atof(value.c_str());
 					solutions[solIndex] = x_val;
 					solIndex++;
-					AXIS2_LOG_INFO(env->log,"setting optValue to [%f]",optValue);
+					AXIS2_LOG_INFO(env->log,"setting x_hold to [%f]",optValue);
 				}
 				else if(string::npos!=line.find("Opt Sol"))
 				{

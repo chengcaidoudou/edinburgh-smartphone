@@ -1,14 +1,2 @@
 INDEX VERSION 1.126+/home/s0965328/workspace-smartphone/server/.metadata/.plugins/org.eclipse.jdt.core
-3740762094.index
-3223902160.index
-2686503099.index
-2889915287.index
 2518685368.index
-1796948596.index
-2040264796.index
-516116778.index
-1193566714.index
-1393721363.index
-925624498.index
-1189062746.index
-1654635368.index

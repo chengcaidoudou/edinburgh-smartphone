@@ -3,4 +3,16 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.maths.ed.ac.uk.OptimizePortfolioSSDReturn"/>
 <fullyQualifiedTypeName name="org.maths.ed.ac.uk.SymbolSet"/>
+<fullyQualifiedTypeName name="javax.net.ssl.SSLContext"/>
+<fullyQualifiedTypeName name="javax.net.ssl.TrustManager"/>
+<fullyQualifiedTypeName name="java.security.cert.X509Certificate"/>
+<fullyQualifiedTypeName name="java.security.SecureRandom"/>
+<fullyQualifiedTypeName name="javax.net.ssl.HttpsURLConnection"/>
+<fullyQualifiedTypeName name="javax.net.ssl.HostnameVerifier"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="javax.net.ssl.X509TrustManager"/>
+<fullyQualifiedTypeName name="java.net.URLConnection"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
 </qualifiedTypeNameHistroy>

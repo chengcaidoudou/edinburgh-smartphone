@@ -155,45 +155,6 @@
         
 
         /**
-         * Getter for protfolioRatio. Deprecated for array types, Use adb_OptimizePortfolioSSDReturn_get_protfolioRatio_at instead
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @return Array of double*s.
-         */
-        axutil_array_list_t* AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_get_protfolioRatio(
-            adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-            const axutil_env_t *env);
-
-        /**
-         * Setter for protfolioRatio.Deprecated for array types, Use adb_OptimizePortfolioSSDReturn_set_protfolioRatio_at
-         * or adb_OptimizePortfolioSSDReturn_add_protfolioRatio instead.
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @param arg_protfolioRatio Array of double*s.
-         * @return AXIS2_SUCCESS on success, else AXIS2_FAILURE
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_set_protfolioRatio(
-            adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-            const axutil_env_t *env,
-            axutil_array_list_t*  arg_protfolioRatio);
-
-        /**
-         * Resetter for protfolioRatio
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @return AXIS2_SUCCESS on success, else AXIS2_FAILURE
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_reset_protfolioRatio(
-            adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-            const axutil_env_t *env);
-
-        
-        
-
-        /**
          * Getter for resultCode. 
          * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
          * @param env pointer to environment struct
@@ -319,71 +280,6 @@
                 const axutil_env_t *env, int i);
 
         
-        
-        /**
-         * Get the ith element of protfolioRatio.
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @param i index of the item to return
-         * @return ith double of the array
-         */
-        double AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_get_protfolioRatio_at(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env, int i);
-
-        /**
-         * Set the ith element of protfolioRatio. (If the ith already exist, it will be replaced)
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @param i index of the item to return
-         * @param arg_protfolioRatio element to set double to the array
-         * @return ith double of the array
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_set_protfolioRatio_at(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env, int i,
-                const double arg_protfolioRatio);
-
-
-        /**
-         * Add to protfolioRatio.
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @param arg_protfolioRatio element to add double to the array
-         * @return AXIS2_SUCCESS on success, else AXIS2_FAILURE
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_add_protfolioRatio(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env,
-                const double arg_protfolioRatio);
-
-        /**
-         * Get the size of the protfolioRatio array.
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct.
-         * @return the size of the protfolioRatio array.
-         */
-        int AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_sizeof_protfolioRatio(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env);
-
-        /**
-         * Remove the ith element of protfolioRatio.
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @param i index of the item to remove
-         * @return AXIS2_SUCCESS on success, else AXIS2_FAILURE
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_remove_protfolioRatio_at(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env, int i);
-
-        
 
 
         /******************************* Checking and Setting NIL values *********************************/
@@ -435,31 +331,6 @@
         
 
         /**
-         * Check whether protfolioRatio is nill
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @return AXIS2_TRUE if the element is nil or AXIS2_FALSE otherwise
-         */
-        axis2_bool_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_is_protfolioRatio_nil(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env);
-
-
-        
-        /**
-         * Set protfolioRatio to nill (currently the same as reset)
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @return AXIS2_SUCCESS on success, else AXIS2_FAILURE
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_set_protfolioRatio_nil(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env);
-        
-
-        /**
          * Check whether resultCode is nill
          * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
          * @param env pointer to environment struct
@@ -501,32 +372,6 @@
          */
         axis2_status_t AXIS2_CALL
         adb_OptimizePortfolioSSDReturn_set_portfolioRatio_nil_at(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn, 
-                const axutil_env_t *env, int i);
-
-        
-        /**
-         * Check whether protfolioRatio is nill at i
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct.
-         * @param i index of the item to return.
-         * @return AXIS2_TRUE if the element is nil or AXIS2_FALSE otherwise
-         */
-        axis2_bool_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_is_protfolioRatio_nil_at(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env, int i);
- 
-       
-        /**
-         * Set protfolioRatio to nill at i
-         * @param  _OptimizePortfolioSSDReturn _ adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct.
-         * @param i index of the item to set.
-         * @return AXIS2_SUCCESS on success, or AXIS2_FAILURE otherwise.
-         */
-        axis2_status_t AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_set_protfolioRatio_nil_at(
                 adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn, 
                 const axutil_env_t *env, int i);
 
@@ -640,7 +485,6 @@
          * @param env pointer to environment struct
          * @param _expReturn double
          * @param _portfolioRatio axutil_array_list_t*
-         * @param _protfolioRatio axutil_array_list_t*
          * @param _resultCode int
          * @return newly created adb_OptimizePortfolioSSDReturn_t object
          */
@@ -649,7 +493,6 @@
             const axutil_env_t *env,
                 double _expReturn,
                 axutil_array_list_t* _portfolioRatio,
-                axutil_array_list_t* _protfolioRatio,
                 int _resultCode);
 
         
@@ -704,27 +547,13 @@
         
 
         /**
-         * Getter for protfolioRatio by property number (3)
-         * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
-         * @param env pointer to environment struct
-         * @return Array of double*s.
-         */
-        axutil_array_list_t* AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_get_property3(
-            adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-            const axutil_env_t *env);
-
-    
-        
-
-        /**
-         * Getter for resultCode by property number (4)
+         * Getter for resultCode by property number (3)
          * @param  _OptimizePortfolioSSDReturn adb_OptimizePortfolioSSDReturn_t object
          * @param env pointer to environment struct
          * @return int
          */
         int AXIS2_CALL
-        adb_OptimizePortfolioSSDReturn_get_property4(
+        adb_OptimizePortfolioSSDReturn_get_property3(
             adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
             const axutil_env_t *env);
 

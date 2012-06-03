@@ -4,7 +4,7 @@
 		<item value="312" key="DIALOG_WIDTH"/>
 		<item value="135" key="DIALOG_Y_ORIGIN"/>
 		<item value="438" key="DIALOG_HEIGHT"/>
-		<item value="1431" key="DIALOG_X_ORIGIN"/>
+		<item value="1288" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,8 +13,9 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="&amp; dataStream" key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="prot"/>
 			<item value="&amp; dataStream"/>
 			<item value="&amp;"/>
 			<item value="SSD"/>
@@ -22,12 +23,15 @@
 			<item value="adb_PortfolioSet_set_porfolio"/>
 			<item value="SymbolSet"/>
 			<item value="localhost:8080"/>
-			<item value="TODO"/>
 		</list>
 		<list key="replacehistory">
 			<item value="&amp; dataStream"/>
 			<item value="MAD"/>
 			<item value="127.0.0.1:80"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="457" key="DIALOG_Y_ORIGIN"/>
+		<item value="526" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

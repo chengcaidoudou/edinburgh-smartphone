@@ -17,19 +17,20 @@
 int calculateOptimizedPortfolioMAD(const axutil_env_t* env,axutil_array_list_t* symbols,double returnRatio,axutil_date_time_t* start,axutil_date_time_t* end,
 		double solutions[],double& expReturn,double& optValue)
 {
+	int retCode = 0;
 	int numSymbols = axutil_array_list_size(symbols,env);
 	ostringstream oss(ostringstream::out);
 	AlmDataWriter* writer = new AlmDataWriter();
 	for(int i=0;i<numSymbols;i++)
 	{
 		axis2_char_t* symbol = (axis2_char_t*)axutil_array_list_get(symbols,env,i);
-		buildURLGoogle(env,symbol,start,end,oss);
+		buildURLYahoo(env,symbol,start,end,oss);
 		string url = oss.str();
 		vector<double> returns;
 		AXIS2_LOG_INFO(env->log,"retrieving data from [%s]",url.c_str());
 		DataRetriever::getReturnDataVector(url,returns);
 		string stock = symbol;
-		writer->addReturnData(stock,returns);
+		retCode = writer->addReturnData(stock,returns);
 	}
 
 	oss.str("");
@@ -39,8 +40,15 @@ int calculateOptimizedPortfolioMAD(const axutil_env_t* env,axutil_array_list_t* 
 	writer->setoReturnRatio(returnRatio);
 	writer->writeSMLDataFileMAD(dataFilename);
 
-	int retCode = executeSMLOOPS(env,GlobalVariables::ALM_MAD_MOD,dataFilename,solutions,optValue,expReturn);
-	AXIS2_LOG_INFO(env->log,"returned from executeSMLOOPS");
+	if(retCode == 0)
+	{
+		retCode = executeSMLOOPS(env,GlobalVariables::ALM_MAD_MOD,dataFilename,solutions,optValue,expReturn);
+		AXIS2_LOG_INFO(env->log,"returned from executeSMLOOPS");
+	}
+	else
+	{
+		AXIS2_LOG_INFO(env->log,"error happens -- not calling oops anymore...");
+	}
 
 	return retCode;
 }

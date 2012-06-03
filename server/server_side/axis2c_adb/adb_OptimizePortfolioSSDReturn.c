@@ -30,10 +30,6 @@
 
                 
                 axis2_bool_t is_valid_portfolioRatio;
-            axutil_array_list_t* property_protfolioRatio;
-
-                
-                axis2_bool_t is_valid_protfolioRatio;
             int property_resultCode;
 
                 
@@ -81,7 +77,6 @@
             _OptimizePortfolioSSDReturn->property_Type = (axis2_char_t*)axutil_strdup(env, "adb_OptimizePortfolioSSDReturn");
             _OptimizePortfolioSSDReturn->is_valid_expReturn  = AXIS2_FALSE;
             _OptimizePortfolioSSDReturn->is_valid_portfolioRatio  = AXIS2_FALSE;
-            _OptimizePortfolioSSDReturn->is_valid_protfolioRatio  = AXIS2_FALSE;
             _OptimizePortfolioSSDReturn->is_valid_resultCode  = AXIS2_FALSE;
             
 
@@ -93,7 +88,6 @@
             const axutil_env_t *env,
                 double _expReturn,
                 axutil_array_list_t* _portfolioRatio,
-                axutil_array_list_t* _protfolioRatio,
                 int _resultCode)
         {
             adb_OptimizePortfolioSSDReturn_t* adb_obj = NULL;
@@ -115,15 +109,6 @@
                                      adb_obj,
                                      env,
                                      _portfolioRatio);
-              if(status == AXIS2_FAILURE) {
-                  adb_OptimizePortfolioSSDReturn_free (adb_obj, env);
-                  return NULL;
-              }
-            
-              status = adb_OptimizePortfolioSSDReturn_set_protfolioRatio(
-                                     adb_obj,
-                                     env,
-                                     _protfolioRatio);
               if(status == AXIS2_FAILURE) {
                   adb_OptimizePortfolioSSDReturn_free (adb_obj, env);
                   return NULL;
@@ -194,7 +179,6 @@
 
             adb_OptimizePortfolioSSDReturn_reset_expReturn(_OptimizePortfolioSSDReturn, env);
             adb_OptimizePortfolioSSDReturn_reset_portfolioRatio(_OptimizePortfolioSSDReturn, env);
-            adb_OptimizePortfolioSSDReturn_reset_protfolioRatio(_OptimizePortfolioSSDReturn, env);
             adb_OptimizePortfolioSSDReturn_reset_resultCode(_OptimizePortfolioSSDReturn, env);
             
 
@@ -453,113 +437,6 @@
                      element_qname = NULL;
                   }
                  
-                    /*
-                     * building protfolioRatio array
-                     */
-                       arr_list = axutil_array_list_create(env, 10);
-                   
-
-                     
-                     /*
-                      * building protfolioRatio element
-                      */
-                     
-                     
-                     
-                                    element_qname = axutil_qname_create(env, "protfolioRatio", "http://uk.ac.ed.maths.org/xsd", NULL);
-                                  
-                               
-                               for (i = 0, sequence_broken = 0, current_node = (is_early_node_valid?axiom_node_get_next_sibling(current_node, env):current_node); !sequence_broken && current_node != NULL;) 
-                                             
-                               {
-                                  if(axiom_node_get_node_type(current_node, env) != AXIOM_ELEMENT)
-                                  {
-                                     current_node =axiom_node_get_next_sibling(current_node, env);
-                                     is_early_node_valid = AXIS2_FALSE;
-                                     continue;
-                                  }
-                                  
-                                  current_element = (axiom_element_t *)axiom_node_get_data_element(current_node, env);
-                                  qname = axiom_element_get_qname(current_element, env, current_node);
-
-                                  if ( 
-                                    (current_node && current_element && (axutil_qname_equals(element_qname, env, qname))))
-                                  {
-                                  
-                                      if( current_node && current_element && (axutil_qname_equals(element_qname, env, qname)))
-                                      {
-                                          is_early_node_valid = AXIS2_TRUE;
-                                      }
-                                      
-                                     
-                                          text_value = axiom_element_get_text(current_element, env, current_node);
-                                          if(text_value != NULL)
-                                          {
-                                               /* we keeps float in arrays from their pointers */
-                                               element = AXIS2_MALLOC(env-> allocator, sizeof(double));
-                                               (*(double*)element) = atof(text_value);
-                                               axutil_array_list_add_at(arr_list, env, i, element);
-                                          }
-                                          
-                                     if(AXIS2_FAILURE ==  status)
-                                     {
-                                         AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "failed in setting the value for protfolioRatio ");
-                                         if(element_qname)
-                                         {
-                                            axutil_qname_free(element_qname, env);
-                                         }
-                                         if(arr_list)
-                                         {
-                                            axutil_array_list_free(arr_list, env);
-                                         }
-                                         return AXIS2_FAILURE;
-                                     }
-
-                                     i ++;
-                                    current_node = axiom_node_get_next_sibling(current_node, env);
-                                  }
-                                  else
-                                  {
-                                      is_early_node_valid = AXIS2_FALSE;
-                                      sequence_broken = 1;
-                                  }
-                                  
-                               }
-
-                               
-                                   if (i < 0)
-                                   {
-                                     /* found element out of order */
-                                     AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "protfolioRatio (@minOccurs = '0') only have %d elements", i);
-                                     if(element_qname)
-                                     {
-                                        axutil_qname_free(element_qname, env);
-                                     }
-                                     if(arr_list)
-                                     {
-                                        axutil_array_list_free(arr_list, env);
-                                     }
-                                     return AXIS2_FAILURE;
-                                   }
-                               
-
-                               if(0 == axutil_array_list_size(arr_list,env))
-                               {
-                                    axutil_array_list_free(arr_list, env);
-                               }
-                               else
-                               {
-                                    status = adb_OptimizePortfolioSSDReturn_set_protfolioRatio(_OptimizePortfolioSSDReturn, env,
-                                                                   arr_list);
-                               }
-
-                             
-                  if(element_qname)
-                  {
-                     axutil_qname_free(element_qname, env);
-                     element_qname = NULL;
-                  }
-                 
 
                      
                      /*
@@ -713,8 +590,6 @@
                     axis2_char_t text_value_2[ADB_DEFAULT_DIGIT_LIMIT];
                     
                     axis2_char_t text_value_3[ADB_DEFAULT_DIGIT_LIMIT];
-                    
-                    axis2_char_t text_value_4[ADB_DEFAULT_DIGIT_LIMIT];
                     
                axis2_char_t *start_input_str = NULL;
                axis2_char_t *end_input_str = NULL;
@@ -956,91 +831,6 @@
                        }
                       
 
-                   if (!_OptimizePortfolioSSDReturn->is_valid_protfolioRatio)
-                   {
-                      
-                           /* no need to complain for minoccurs=0 element */
-                            
-                          
-                   }
-                   else
-                   {
-                     start_input_str = (axis2_char_t*)AXIS2_MALLOC(env->allocator, sizeof(axis2_char_t) *
-                                 (4 + axutil_strlen(p_prefix) + 
-                                  axutil_strlen("protfolioRatio"))); 
-                                 
-                                 /* axutil_strlen("<:>") + 1 = 4 */
-                     end_input_str = (axis2_char_t*)AXIS2_MALLOC(env->allocator, sizeof(axis2_char_t) *
-                                 (5 + axutil_strlen(p_prefix) + axutil_strlen("protfolioRatio")));
-                                  /* axutil_strlen("</:>") + 1 = 5 */
-                                  
-                     
-
-                   
-                   
-                     /*
-                      * Parsing protfolioRatio array
-                      */
-                     if (_OptimizePortfolioSSDReturn->property_protfolioRatio != NULL)
-                     {
-                        
-                            sprintf(start_input_str, "<%s%sprotfolioRatio>",
-                                 p_prefix?p_prefix:"",
-                                 (p_prefix && axutil_strcmp(p_prefix, ""))?":":""); 
-                            
-                         start_input_str_len = axutil_strlen(start_input_str);
-
-                         sprintf(end_input_str, "</%s%sprotfolioRatio>",
-                                 p_prefix?p_prefix:"",
-                                 (p_prefix && axutil_strcmp(p_prefix, ""))?":":"");
-                         end_input_str_len = axutil_strlen(end_input_str);
-
-                         count = axutil_array_list_size(_OptimizePortfolioSSDReturn->property_protfolioRatio, env);
-                         for(i = 0; i < count; i ++)
-                         {
-                            element = axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i);
-
-                            if(NULL == element) 
-                            {
-                                continue;
-                            }
-                    
-                     
-                     /*
-                      * parsing protfolioRatio element
-                      */
-
-                    
-                    
-                               sprintf (text_value_3, "%f", (double)*((double*)element));
-                             
-                           axutil_stream_write(stream, env, start_input_str, start_input_str_len);
-                           
-                           axutil_stream_write(stream, env, text_value_3, axutil_strlen(text_value_3));
-                           
-                           axutil_stream_write(stream, env, end_input_str, end_input_str_len);
-                           
-                         }
-                     }
-                   
-                     
-                     AXIS2_FREE(env->allocator,start_input_str);
-                     AXIS2_FREE(env->allocator,end_input_str);
-                 } 
-
-                 
-                       if(!(p_prefix = (axis2_char_t*)axutil_hash_get(namespaces, "http://uk.ac.ed.maths.org/xsd", AXIS2_HASH_KEY_STRING)))
-                       {
-                           p_prefix = (axis2_char_t*)AXIS2_MALLOC(env->allocator, sizeof (axis2_char_t) * ADB_DEFAULT_NAMESPACE_PREFIX_LIMIT);
-                           sprintf(p_prefix, "n%d", (*next_ns_index)++);
-                           axutil_hash_set(namespaces, "http://uk.ac.ed.maths.org/xsd", AXIS2_HASH_KEY_STRING, p_prefix);
-                           
-                           axiom_element_declare_namespace_assume_param_ownership(parent_element, env, axiom_namespace_create (env,
-                                            "http://uk.ac.ed.maths.org/xsd",
-                                            p_prefix));
-                       }
-                      
-
                    if (!_OptimizePortfolioSSDReturn->is_valid_resultCode)
                    {
                       
@@ -1080,11 +870,11 @@
                                  (p_prefix && axutil_strcmp(p_prefix, ""))?":":"");
                         end_input_str_len = axutil_strlen(end_input_str);
                     
-                               sprintf (text_value_4, AXIS2_PRINTF_INT32_FORMAT_SPECIFIER, _OptimizePortfolioSSDReturn->property_resultCode);
+                               sprintf (text_value_3, AXIS2_PRINTF_INT32_FORMAT_SPECIFIER, _OptimizePortfolioSSDReturn->property_resultCode);
                              
                            axutil_stream_write(stream, env, start_input_str, start_input_str_len);
                            
-                           axutil_stream_write(stream, env, text_value_4, axutil_strlen(text_value_4));
+                           axutil_stream_write(stream, env, text_value_3, axutil_strlen(text_value_3));
                            
                            axutil_stream_write(stream, env, end_input_str, end_input_str_len);
                            
@@ -1650,452 +1440,10 @@
            
 
             /**
-             * Getter for protfolioRatio by  Property Number 3
+             * Getter for resultCode by  Property Number 3
              */
-            axutil_array_list_t* AXIS2_CALL
+            int AXIS2_CALL
             adb_OptimizePortfolioSSDReturn_get_property3(
-                adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                const axutil_env_t *env)
-            {
-                return adb_OptimizePortfolioSSDReturn_get_protfolioRatio(_OptimizePortfolioSSDReturn,
-                                             env);
-            }
-
-            /**
-             * getter for protfolioRatio.
-             */
-            axutil_array_list_t* AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_get_protfolioRatio(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env)
-             {
-                
-                    AXIS2_ENV_CHECK(env, NULL);
-                    AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, NULL);
-                  
-
-                return _OptimizePortfolioSSDReturn->property_protfolioRatio;
-             }
-
-            /**
-             * setter for protfolioRatio
-             */
-            axis2_status_t AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_set_protfolioRatio(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env,
-                    axutil_array_list_t*  arg_protfolioRatio)
-             {
-                
-                 int size = 0;
-                 int i = 0;
-                 axis2_bool_t non_nil_exists = AXIS2_FALSE;
-                
-
-                AXIS2_ENV_CHECK(env, AXIS2_FAILURE);
-                AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_FAILURE);
-                
-                if(_OptimizePortfolioSSDReturn->is_valid_protfolioRatio &&
-                        arg_protfolioRatio == _OptimizePortfolioSSDReturn->property_protfolioRatio)
-                {
-                    
-                    return AXIS2_SUCCESS; 
-                }
-
-                
-                 size = axutil_array_list_size(arg_protfolioRatio, env);
-                 
-                 if (size < 0)
-                 {
-                     AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "protfolioRatio has less than minOccurs(0)");
-                     return AXIS2_FAILURE;
-                 }
-                 for(i = 0; i < size; i ++ )
-                 {
-                     if(NULL != axutil_array_list_get(arg_protfolioRatio, env, i))
-                     {
-                         non_nil_exists = AXIS2_TRUE;
-                         break;
-                     }
-                 }
-
-                 adb_OptimizePortfolioSSDReturn_reset_protfolioRatio(_OptimizePortfolioSSDReturn, env);
-
-                
-                if(NULL == arg_protfolioRatio)
-                {
-                    /* We are already done */
-                    return AXIS2_SUCCESS;
-                }
-                _OptimizePortfolioSSDReturn->property_protfolioRatio = arg_protfolioRatio;
-                        if(non_nil_exists)
-                        {
-                            _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_TRUE;
-                        }
-                        
-                    
-                return AXIS2_SUCCESS;
-             }
-
-            
-            /**
-             * Get ith element of protfolioRatio.
-             */
-            double AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_get_protfolioRatio_at(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env, int i)
-            {
-                double* ret_val;
-
-                
-                    AXIS2_ENV_CHECK(env, (double)0);
-                    AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, (double)0);
-                  
-
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                {
-                    return (double)0;
-                }
-                ret_val = (double*)axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i);
-                
-                    if(ret_val)
-                    {
-                        return *ret_val;
-                    }
-                    return (double)0;
-                  
-            }
-
-            /**
-             * Set the ith element of protfolioRatio.
-             */
-            axis2_status_t AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_set_protfolioRatio_at(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env, int i,
-                    const double arg_protfolioRatio)
-            {
-                void *element = NULL;
-                int size = 0;
-                int j;
-                int non_nil_count;
-                axis2_bool_t non_nil_exists = AXIS2_FALSE;
-
-                double* ptr_param_protfolioRatio;
-                
-
-                AXIS2_ENV_CHECK(env, AXIS2_FAILURE);
-                AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_FAILURE);
-                
-                if( _OptimizePortfolioSSDReturn->is_valid_protfolioRatio &&
-                    _OptimizePortfolioSSDReturn->property_protfolioRatio &&
-                
-                    arg_protfolioRatio == *((double*)axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i)))
-                  
-                {
-                    
-                    return AXIS2_SUCCESS; 
-                }
-
-                
-                     non_nil_exists = AXIS2_TRUE; /* no way to check for nill for each elements for primitive types */
-                  
-
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                {
-                    _OptimizePortfolioSSDReturn->property_protfolioRatio = axutil_array_list_create(env, 10);
-                }
-                
-                /* check whether there already exist an element */
-                element = axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i);
-                if(NULL != element)
-                {
-                  
-                  
-                  
-                        
-                        /* we keep primtives as pointers in arrasy, so need to free them */
-                        AXIS2_FREE(env-> allocator, element);
-                     
-                }
-
-                
-                    if(!non_nil_exists)
-                    {
-                        
-                        _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_FALSE;
-                        axutil_array_list_set(_OptimizePortfolioSSDReturn->property_protfolioRatio , env, i, NULL);
-                        
-                        return AXIS2_SUCCESS;
-                    }
-                ptr_param_protfolioRatio =  (double*)
-                            AXIS2_MALLOC(env->allocator, sizeof(double));
-                   if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                   {
-                       AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "Failed in allocatting memory for new value of protfolioRatio");
-                       return AXIS2_FAILURE;
-                       
-                   }
-                   *ptr_param_protfolioRatio = arg_protfolioRatio;
-                   axutil_array_list_set(_OptimizePortfolioSSDReturn->property_protfolioRatio , env, i, ptr_param_protfolioRatio);
-                  _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_TRUE;
-                
-                return AXIS2_SUCCESS;
-            }
-
-            /**
-             * Add to protfolioRatio.
-             */
-            axis2_status_t AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_add_protfolioRatio(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env,
-                    const double arg_protfolioRatio)
-             {
-                double* ptr_param_protfolioRatio;
-                
-
-                AXIS2_ENV_CHECK(env, AXIS2_FAILURE);
-                AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_FAILURE);
-
-                
-
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                {
-                    _OptimizePortfolioSSDReturn->property_protfolioRatio = axutil_array_list_create(env, 10);
-                }
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                {
-                    AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "Failed in allocatting memory for protfolioRatio");
-                    return AXIS2_FAILURE;
-                    
-                }
-                ptr_param_protfolioRatio =  (double*)
-                            AXIS2_MALLOC(env->allocator, sizeof(double));
-                   if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                   {
-                       AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "Failed in allocatting memory for new value of protfolioRatio");
-                       return AXIS2_FAILURE;
-                       
-                   }
-                   *ptr_param_protfolioRatio = arg_protfolioRatio;
-                   axutil_array_list_add(_OptimizePortfolioSSDReturn->property_protfolioRatio , env, ptr_param_protfolioRatio);
-                  _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_TRUE;
-                return AXIS2_SUCCESS;
-             }
-
-            /**
-             * Get the size of the protfolioRatio array.
-             */
-            int AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_sizeof_protfolioRatio(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env)
-            {
-                AXIS2_ENV_CHECK(env, -1);
-                AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, -1);
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                {
-                    return 0;
-                }
-                return axutil_array_list_size(_OptimizePortfolioSSDReturn->property_protfolioRatio, env);
-            }
-
-            /**
-             * remove the ith element, same as set_nil_at.
-             */
-            axis2_status_t AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_remove_protfolioRatio_at(
-                    adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                    const axutil_env_t *env, int i)
-            {
-                return adb_OptimizePortfolioSSDReturn_set_protfolioRatio_nil_at(_OptimizePortfolioSSDReturn, env, i);
-            }
-
-            
-
-           /**
-            * resetter for protfolioRatio
-            */
-           axis2_status_t AXIS2_CALL
-           adb_OptimizePortfolioSSDReturn_reset_protfolioRatio(
-                   adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                   const axutil_env_t *env)
-           {
-               int i = 0;
-               int count = 0;
-               void *element = NULL;
-
-               AXIS2_ENV_CHECK(env, AXIS2_FAILURE);
-               AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_FAILURE);
-               
-
-               
-                  if (_OptimizePortfolioSSDReturn->property_protfolioRatio != NULL)
-                  {
-                      count = axutil_array_list_size(_OptimizePortfolioSSDReturn->property_protfolioRatio, env);
-                      for(i = 0; i < count; i ++)
-                      {
-                         element = axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i);
-                
-            
-                
-                if(element != NULL)
-                {
-                   
-                   
-                        
-                        /* we keep primtives as pointers in arrasy, so need to free them */
-                        AXIS2_FREE(env-> allocator, element);
-                       element = NULL;
-                }
-            
-                
-                
-                
-                      }
-                      axutil_array_list_free(_OptimizePortfolioSSDReturn->property_protfolioRatio, env);
-                  }
-                _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_FALSE; 
-               return AXIS2_SUCCESS;
-           }
-
-           /**
-            * Check whether protfolioRatio is nill
-            */
-           axis2_bool_t AXIS2_CALL
-           adb_OptimizePortfolioSSDReturn_is_protfolioRatio_nil(
-                   adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                   const axutil_env_t *env)
-           {
-               AXIS2_ENV_CHECK(env, AXIS2_TRUE);
-               AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_TRUE);
-               
-               return !_OptimizePortfolioSSDReturn->is_valid_protfolioRatio;
-           }
-
-           /**
-            * Set protfolioRatio to nill (currently the same as reset)
-            */
-           axis2_status_t AXIS2_CALL
-           adb_OptimizePortfolioSSDReturn_set_protfolioRatio_nil(
-                   adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                   const axutil_env_t *env)
-           {
-               return adb_OptimizePortfolioSSDReturn_reset_protfolioRatio(_OptimizePortfolioSSDReturn, env);
-           }
-
-           
-           /**
-            * Check whether protfolioRatio is nill at i
-            */
-           axis2_bool_t AXIS2_CALL
-           adb_OptimizePortfolioSSDReturn_is_protfolioRatio_nil_at(
-                   adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                   const axutil_env_t *env, int i)
-           {
-               AXIS2_ENV_CHECK(env, AXIS2_TRUE);
-               AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_TRUE);
-               
-               return (_OptimizePortfolioSSDReturn->is_valid_protfolioRatio == AXIS2_FALSE ||
-                        NULL == _OptimizePortfolioSSDReturn->property_protfolioRatio || 
-                        NULL == axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i));
-           }
-
-           /**
-            * Set protfolioRatio to nill at i
-            */
-           axis2_status_t AXIS2_CALL
-           adb_OptimizePortfolioSSDReturn_set_protfolioRatio_nil_at(
-                   adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
-                   const axutil_env_t *env, int i)
-           {
-                void *element = NULL;
-                int size = 0;
-                int j;
-                axis2_bool_t non_nil_exists = AXIS2_FALSE;
-
-                int k = 0;
-
-                AXIS2_ENV_CHECK(env, AXIS2_FAILURE);
-                AXIS2_PARAM_CHECK(env->error, _OptimizePortfolioSSDReturn, AXIS2_FAILURE);
-
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL ||
-                            _OptimizePortfolioSSDReturn->is_valid_protfolioRatio == AXIS2_FALSE)
-                {
-                    
-                    non_nil_exists = AXIS2_FALSE;
-                }
-                else
-                {
-                    size = axutil_array_list_size(_OptimizePortfolioSSDReturn->property_protfolioRatio, env);
-                    for(j = 0, k = 0; j < size; j ++ )
-                    {
-                        if(i == j) continue; 
-                        if(NULL != axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i))
-                        {
-                            k ++;
-                            non_nil_exists = AXIS2_TRUE;
-                            if( k >= 0)
-                            {
-                                break;
-                            }
-                        }
-                    }
-                }
-                
-
-                if( k < 0)
-                {
-                       AXIS2_LOG_ERROR(env->log, AXIS2_LOG_SI, "Size of the array of protfolioRatio is beinng set to be smaller than the specificed number of minOccurs(0)");
-                       return AXIS2_FAILURE;
-                }
- 
-                if(_OptimizePortfolioSSDReturn->property_protfolioRatio == NULL)
-                {
-                    _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_FALSE;
-                    
-                    return AXIS2_SUCCESS;
-                }
-
-                /* check whether there already exist an element */
-                element = axutil_array_list_get(_OptimizePortfolioSSDReturn->property_protfolioRatio, env, i);
-                if(NULL != element)
-                {
-                  
-                  
-                  
-                        
-                        /* we keep primtives as pointers in arrasy, so need to free them */
-                        AXIS2_FREE(env-> allocator, element);
-                     
-                }
-
-                
-                    if(!non_nil_exists)
-                    {
-                        
-                        _OptimizePortfolioSSDReturn->is_valid_protfolioRatio = AXIS2_FALSE;
-                        axutil_array_list_set(_OptimizePortfolioSSDReturn->property_protfolioRatio , env, i, NULL);
-                        return AXIS2_SUCCESS;
-                    }
-                
-
-                
-                axutil_array_list_set(_OptimizePortfolioSSDReturn->property_protfolioRatio , env, i, NULL);
-                
-                return AXIS2_SUCCESS;
-
-           }
-
-           
-
-            /**
-             * Getter for resultCode by  Property Number 4
-             */
-            int AXIS2_CALL
-            adb_OptimizePortfolioSSDReturn_get_property4(
                 adb_OptimizePortfolioSSDReturn_t* _OptimizePortfolioSSDReturn,
                 const axutil_env_t *env)
             {

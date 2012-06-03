@@ -27,23 +27,29 @@ AlmDataWriter::~AlmDataWriter() {
 	// TODO Auto-generated destructor stub
 }
 
-void AlmDataWriter::addReturnData(string symbol,vector<double> returns)
+int AlmDataWriter::addReturnData(string symbol,vector<double> returns)
 {
+	int retCode = 0;
 	this->symbols.push_back(symbol);
 	this->returnsList.push_back(returns);
 	if((!this->returnsList.empty()) && returns.size()!=this->returnsList.front().size())
 	{
+		retCode = 3;
 		Log::ERROR("-- - symbols return data doesn't match .....");
 	}
+	return retCode;
 }
-void AlmDataWriter::addBenchmarkReturnData(string symbol,vector<double> returns)
+int AlmDataWriter::addBenchmarkReturnData(string symbol,vector<double> returns)
 {
+	int retCode = 0;
 	this->benchmark = symbol;
 	this->bReturnsOrignal = returns;
 	if(this->returnsList.front().size()!=returns.size())
 	{
+		retCode = 3;
 		Log::ERROR("-- - benchmark return data doesn't match .....");
 	}
+	return retCode;
 }
 
 void AlmDataWriter::setoReturnRatio(double ratio)
@@ -176,6 +182,7 @@ void AlmDataWriter::writeReturn(ofstream& dataStream)
 			dataStream<<"\t\t\t"<<sname<<"\t"<<nodeIndex<<"\t"<<ret<<endl;
 			nodeIndex++;
 		}
+		it_returns++;
 	}
 	dataStream<<"\t\t\t"<<";"<<endl;
 }

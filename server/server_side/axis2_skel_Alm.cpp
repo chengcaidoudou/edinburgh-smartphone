@@ -67,7 +67,7 @@
 			AXIS2_LOG_INFO(env->log,"created ssdresponse and ssdreturn ");
 			for(int i=0;i<numSymbols;i++)
 			{
-				adb_OptimizePortfolioSSDReturn_add_protfolioRatio(ssdReturn,env,solutions[i]);
+				adb_OptimizePortfolioSSDReturn_add_portfolioRatio(ssdReturn,env,solutions[i]);
 				AXIS2_LOG_INFO(env->log,"solutions[%d]=[%f]",i,solutions[i]);
 			}
 			adb_OptimizePortfolioSSDReturn_set_resultCode(ssdReturn,env,retCode);
@@ -115,11 +115,11 @@
 			AXIS2_LOG_INFO(env->log,"created MADresponse and MADreturn ");
 			for(int i=0;i<numSymbols;i++)
 			{
-				adb_OptimizePortfolioMADReturn_add_protfolioRatio(MADReturn,env,solutions[i]);
+				adb_OptimizePortfolioMADReturn_add_portfolioRatio(MADReturn,env,solutions[i]);
 				AXIS2_LOG_INFO(env->log,"solutions[%d]=[%f]",i,solutions[i]);
 			}
 			adb_OptimizePortfolioMADReturn_set_resultCode(MADReturn,env,retCode);
-			adb_OptimizePortfolioMADReturn_set_expReturn(MADReturn,env,expReturn);
+			adb_OptimizePortfolioMADReturn_set_expReturn(MADReturn,env,optValue);
 			adb_optimizePortfolioMADResponse_set_return(madResponse,env,MADReturn);
 			AXIS2_LOG_INFO(env->log,"Setting Response DONE =====================");
 			//return ssdResponse;

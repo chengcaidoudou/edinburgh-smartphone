@@ -18,8 +18,8 @@ public:
 	AlmDataWriter();
 	virtual ~AlmDataWriter();
 
-	void addReturnData(string symbol,vector<double> returns);
-	void addBenchmarkReturnData(string symbol,vector<double> returns);
+	int addReturnData(string symbol,vector<double> returns);
+	int addBenchmarkReturnData(string symbol,vector<double> returns);
 	void setoReturnRatio(double ratio);
 	void writeSMLDataFileSSD(string filename);
 	void writeSMLDataFileMAD(string filename);
