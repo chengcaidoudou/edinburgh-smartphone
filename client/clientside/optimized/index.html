@@ -1,0 +1,130 @@
+<html>
+<head>
+<script language="javascript" type="text/javascript" src="./resource/cxf-utils.js" defer></script>
+<script language="javascript" type="text/javascript" src="./resource/Alm.js" defer></script>
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.8.18.custom/css/smoothness/jquery-ui-1.8.18.custom.css">
+<link rel="stylesheet" type="text/css" href="./resource/jquery.loadmask.css" />
+<script language="javascript" type="text/javascript" src="./jquery-ui-1.8.18.custom/js/jquery-1.7.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="./jquery-ui-1.8.18.custom/js/jquery-ui-1.8.18.custom.min.js"></script>
+<script language="javascript" type="text/javascript" src="./resource/jquery.loadmask.min.js"></script>
+<link href="./resource/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="./resource/javascript.js"></script>
+</head>
+<body>
+<div id="all">
+	<ul>
+		<li value="ssd"><a href="#ssd">SSD</a></li> 
+		<li value="mad"><a href="#mad">MAD</a></li>
+		<li value="help"><a href="#help">Help</a></li>
+	</ul>
+	<div id="ssd">
+		<div class="problem"> 
+			<div>
+				<fieldset id="symbolset_ssd">
+					<legend>Stock Symbols</legend>
+					<input type="text" class="symbol" value="GOOG">
+					<input type="text" class="symbol" value="AAPL">
+					<input type="text" class="symbol" value="MSFT">
+				</fieldset>
+			</div>
+			<div>
+				<fieldset>
+					<legend>Benchmark</legend>
+					<input id="benchmark" type="text" class="benchmark" value="^IXIC">
+				</fieldset>
+			</div>
+			<div>
+				<fieldset>
+					<legend>Data Range</legend>
+					<label>Start Date:</label><input type="text" id="startdate_ssd" class="date">
+					<label>End   Date:</label><input type="text" id="enddate_ssd" class="date">
+				</fieldset>
+			</div>
+		</div>
+		<div>
+			<button action="add">Add Symbol</button>
+			<button action="del">Del Symbol</button>
+			<button action="solve">Solve</button>
+		</div>
+		
+		<div class="result">
+			<textarea id="result_area_ssd" readonly></textarea>
+		</div>
+	</div>
+	
+	<div id="mad">
+		<div class="problem"> 
+			<div>
+				<fieldset id="symbolset_mad">
+					<legend>Stock Symbols</legend>
+					<input type="text" class="symbol" value="GOOG">
+					<input type="text" class="symbol" value="AAPL">
+					<input type="text" class="symbol" value="MSFT">
+				</fieldset>
+			</div>
+			<div>
+				<fieldset>
+					<legend>Return ratio</legend>
+					<input id="returnRatio" type="text" value="0.01">
+				</fieldset>
+			</div>
+			<div>
+				<fieldset>
+					<legend>Data Range</legend>
+					<label>Start Date:</label><input type="Text" class="date" id="startdate_mad">
+					<label>End   Date:</label><input type="Text" class="date" id="enddate_mad">
+				</fieldset>
+			</div>
+		</div>
+		<div>
+			<button action="add">Add Symbol</button>
+			<button action="del">Del Symbol</button>
+			<button action="solve">Solve</button>
+		</div>
+		
+		<div class="result">
+			<textarea id="result_area_mad" readonly></textarea>
+		</div>
+	</div>
+	<div id="help">
+		<div id="sections">
+			<h3><a href="#">Contact Us</a></h3>
+			<div>
+				<ul>
+					<li>This application is to demonstrate the research work at University of Edinburgh's <a href="http://www.maths.ed.ac.uk/ERGO/">OR group</a>.</li>  
+					<li>You can <a href="mailto:F.Qiang@sms.ed.ac.uk">report a bug</a> by sending us email. </li>
+				</ul>
+			</div>
+			
+			<h3><a href="#">MAD Model</a></h3>
+			<div>
+				<p>Portfolio Optimization with Mean Absolute Derivation(MAD) as risk measurement</p>
+				<ul>
+					<li><b>Stock Symbols:</b> In each textbox, a stock symbol should be filled. The stock symbol must be valid and exist on <a href="http://www.google.ca/finance">Google Fiance</a>.</li>  
+					<li><b>Return Ratio:</b> The miminal return ratio that you want for your optimized portfolio.</li>
+					<li><b>Data Range:</b> The start and end date for the stock pricing data retrieval. Weekly stock pricing data will be retrieved.</li>
+					<li><b>Add Symbol,Del Symbol</b> buttons are used to add or del a textbox on the stock symbols field.</li>
+					<li><b>Solve</b> button is use to send the request to the web service which is powered by <a href="http://www.maths.ed.ac.uk/ERGO/sml/">SML</a> and <a href="http://www.maths.ed.ac.uk/~gondzio/parallel/solver.html">OOPS</a>.</li>
+				</ul>
+			</div>
+			
+			<h3><a href="#">SSD Model</a></h3>
+			<div>
+				<p>Portfolio Optimization with Second-order Stochastic Dominance</p>
+				<ul>
+					<li><b>Stock Symbols:</b> A stock symbol should be filled in each textbox. The stock symbol must be valid and exist on <a href="http://www.google.ca/finance">Google Fiance</a>.</li>  
+					<li><b>Benchmark:</b> To be filled with an stock index symbol, so that the computed optimial portfoilo would perform better than it stochastically. The index symbol must be valid and exist on <a href="http://uk.finance.yahoo.com/"> Yahoo Finance</a>.</li>
+					<li><b>Data Range:</b> The start and end date for the stock pricing data retrieval. Weekly stock pricing data will be retrieved.</li>
+					<li><b>Add Symbol,Del Symbol</b> buttons are used to add or del a textbox on the stock symbols field.</li>
+					<li><b>Solve</b> button is use to send the request to the web service which is powered by <a href="http://www.maths.ed.ac.uk/ERGO/sml/">SML</a> and <a href="http://www.maths.ed.ac.uk/~gondzio/parallel/solver.html">OOPS</a>.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="dialog">
+		<p>testing</p>
+	</div>
+</div>
+<textarea id="debug_area" readonly></textarea>
+</body>
+</html>

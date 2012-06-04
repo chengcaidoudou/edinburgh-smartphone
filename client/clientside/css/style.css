@@ -1,0 +1,63 @@
+body
+{
+	width:300px;
+}
+
+#all
+{
+	margine:0px auto;
+	width: 300px;
+	padding:1px;
+	z-index: 0;
+}
+
+input[type="text"]
+{
+	height: 25px;
+	margine: 1px;
+}
+
+.symbol, #benchmark, #returnRatio
+{
+	width:80px;
+}
+
+.date
+{
+	width:100px;
+}
+
+.result textarea
+{
+	height: 150px;
+	width: 100%;
+	font-family: monospace;
+}
+
+#debug_area
+{
+	height: 250px;
+	width: 100%;
+	/* visibility: hidden; */
+}
+
+#sections .ui-accordion-content
+{
+	padding: 0px;
+}
+#sections .ui-accordion-header a
+{
+	padding-bottom: 0px;
+}
+
+#sections ul
+{
+	margin: 5px;
+	padding-left: 30px;
+}
+
+#sections p
+{
+	margin: 5px;
+	padding-left: 30px;
+}
