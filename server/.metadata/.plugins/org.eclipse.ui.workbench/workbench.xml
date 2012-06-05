@@ -101,23 +101,23 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="alm_ssd_mod.cpp" partName="alm_ssd_mod.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/alm_ssd_mod.cpp" title="alm_ssd_mod.cpp" tooltip="server_side/alm_ssd_mod.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/alm_ssd_mod.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1569" selectionTopPixel="55"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="824" selectionTopPixel="109"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="DataRetriever.cpp" partName="DataRetriever.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/src/DataRetriever.cpp" title="DataRetriever.cpp" tooltip="server_side/src/DataRetriever.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/src/DataRetriever.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="527" selectionTopPixel="261"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="AlmDataWriter.cpp" partName="AlmDataWriter.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/src/AlmDataWriter.cpp" title="AlmDataWriter.cpp" tooltip="server_side/src/AlmDataWriter.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="AlmDataWriter.cpp" partName="AlmDataWriter.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/src/AlmDataWriter.cpp" title="AlmDataWriter.cpp" tooltip="server_side/src/AlmDataWriter.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/src/AlmDataWriter.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="374" selectionTopPixel="80"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="916" selectionTopPixel="389"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="alm_service_common.cpp" partName="alm_service_common.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/alm_service_common.cpp" title="alm_service_common.cpp" tooltip="server_side/alm_service_common.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="alm_service_common.cpp" partName="alm_service_common.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/alm_service_common.cpp" title="alm_service_common.cpp" tooltip="server_side/alm_service_common.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/alm_service_common.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3967" selectionTopPixel="436"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="711" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="alm_mad_mod.cpp" partName="alm_mad_mod.cpp" path="/home/s0965328/workspace-smartphone/server/server_side/alm_mad_mod.cpp" title="alm_mad_mod.cpp" tooltip="server_side/alm_mad_mod.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/alm_mad_mod.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="300" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1061" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="alm_ssd_mod.h" partName="alm_ssd_mod.h" path="/home/s0965328/workspace-smartphone/server/server_side/alm_ssd_mod.h" title="alm_ssd_mod.h" tooltip="server_side/alm_ssd_mod.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/server_side/alm_ssd_mod.h"/>
@@ -135,9 +135,8 @@
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="2" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
 </viewState>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
@@ -176,7 +175,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="&lt;C/C++&gt;">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="&lt;C/C++&gt;">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor descriptor="org.eclipse.jdt.ui.JavaPerspective" id="&lt;Java&gt;" label="&lt;Java&gt;"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -331,10 +330,10 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@728907" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
+<fastViewBar fastViewLocation="1024" id="org.eclipse.ui.internal.ViewStack@728907" orientation="256" selectedTabId="org.eclipse.search.ui.views.SearchView" style="0">
 <fastViews>
 <view id="org.eclipse.ui.console.ConsoleView" ratio="0.2993452"/>
-<view id="org.eclipse.search.ui.views.SearchView" ratio="0.2993452"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.29852217"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
@@ -601,11 +600,7 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMAD.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_OptimizePortfolioMADReturn.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_OptimizePortfolioSSDReturn.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_SymbolSet.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMAD.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2c_adb/adb_optimizePortfolioMADResponse.c"/>
@@ -627,156 +622,159 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_service_common.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_ssd_mod.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/axis2_skel_Alm.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_mad_mod.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_ssd_mod.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/server_side/alm_service_common.cpp"/>
 </editors>
-<item historyLabel="adb_optimizePortfolioMAD.h" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="adb_optimizePortfolioMADResponse.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="adb_optimizePortfolioMADResponse.h" index="2">
-<position info="not_deleted" x="469" y="0"/>
-</item>
-<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="3">
-<position info="not_deleted" x="2552" y="0"/>
-</item>
-<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="3">
-<position info="not_deleted" x="2560" y="15"/>
-</item>
-<item historyLabel="adb_OptimizePortfolioSSDReturn.c" index="4">
-<position info="not_deleted" x="2575" y="0"/>
-</item>
-<item historyLabel="adb_SymbolSet.c" index="5">
+<item historyLabel="adb_SymbolSet.c" index="1">
 <position info="not_deleted" x="1576" y="0"/>
 </item>
-<item historyLabel="adb_optimizePortfolioMAD.c" index="6">
+<item historyLabel="adb_optimizePortfolioMAD.c" index="2">
 <position info="not_deleted" x="2262" y="0"/>
 </item>
-<item historyLabel="adb_optimizePortfolioMADResponse.c" index="7">
+<item historyLabel="adb_optimizePortfolioMADResponse.c" index="3">
 <position info="not_deleted" x="1844" y="0"/>
 </item>
-<item historyLabel="adb_optimizePortfolioSSD.c" index="8">
+<item historyLabel="adb_optimizePortfolioSSD.c" index="4">
 <position info="not_deleted" x="2032" y="0"/>
 </item>
-<item historyLabel="adb_optimizePortfolioSSDResponse.c" index="9">
+<item historyLabel="adb_optimizePortfolioSSDResponse.c" index="5">
 <position info="not_deleted" x="1844" y="0"/>
 </item>
-<item historyLabel="axis2_extension_mapper.c" index="10">
+<item historyLabel="axis2_extension_mapper.c" index="6">
 <position info="not_deleted" x="11335" y="0"/>
 </item>
-<item historyLabel="axis2_skel_Alm.cpp" index="11">
+<item historyLabel="axis2_skel_Alm.cpp" index="7">
 <position info="not_deleted" x="5243" y="0"/>
 </item>
-<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="3">
+<item historyLabel="adb_OptimizePortfolioMADReturn.c" index="0">
 <position info="not_deleted" x="52147" y="49"/>
 </item>
-<item historyLabel="axis2_skel_Alm.cpp" index="12">
+<item historyLabel="axis2_skel_Alm.cpp" index="8">
 <position info="not_deleted" x="2288" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.cpp" index="13">
+<item historyLabel="alm_ssd_mod.cpp" index="9">
 <position info="not_deleted" x="1010" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="14">
+<item historyLabel="AlmDataWriter.cpp" index="10">
 <position info="not_deleted" x="565" y="13"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="14">
+<item historyLabel="AlmDataWriter.cpp" index="10">
 <position info="not_deleted" x="2709" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="14">
+<item historyLabel="AlmDataWriter.cpp" index="10">
 <position info="not_deleted" x="618" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="15">
+<item historyLabel="alm_service_common.cpp" index="11">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="15">
+<item historyLabel="alm_service_common.cpp" index="11">
 <position info="not_deleted" x="1216" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="15">
+<item historyLabel="alm_service_common.cpp" index="11">
 <position info="not_deleted" x="1419" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="15">
+<item historyLabel="alm_service_common.cpp" index="11">
 <position info="not_deleted" x="1997" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="14">
+<item historyLabel="AlmDataWriter.cpp" index="10">
 <position info="not_deleted" x="618" y="0"/>
 </item>
-<item historyLabel="DataRetriever.cpp" index="16">
+<item historyLabel="DataRetriever.cpp" index="12">
 <position info="not_deleted" x="527" y="19"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="14">
+<item historyLabel="AlmDataWriter.cpp" index="10">
 <position info="not_deleted" x="2865" y="19"/>
 </item>
-<item historyLabel="axis2_skel_Alm.cpp" index="12">
+<item historyLabel="axis2_skel_Alm.cpp" index="8">
 <position info="not_deleted" x="2288" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="17">
+<item historyLabel="alm_service_common.cpp" index="13">
 <position info="not_deleted" x="3160" y="0"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="766" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="17">
+<item historyLabel="alm_service_common.cpp" index="13">
 <position info="not_deleted" x="3160" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.cpp" index="19">
+<item historyLabel="alm_ssd_mod.cpp" index="15">
 <position info="not_deleted" x="1009" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.cpp" index="19">
+<item historyLabel="alm_ssd_mod.cpp" index="15">
 <position info="not_deleted" x="753" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.h" index="20">
+<item historyLabel="alm_ssd_mod.h" index="16">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.cpp" index="19">
+<item historyLabel="alm_ssd_mod.cpp" index="15">
 <position info="not_deleted" x="753" y="0"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="766" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp.svn-base" index="21">
+<item historyLabel="AlmDataWriter.cpp.svn-base" index="17">
 <position info="not_deleted" x="577" y="0"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="1061" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="22">
+<item historyLabel="AlmDataWriter.cpp" index="18">
 <position info="not_deleted" x="571" y="0"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="1033" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="22">
+<item historyLabel="AlmDataWriter.cpp" index="18">
 <position info="not_deleted" x="572" y="0"/>
 </item>
-<item historyLabel="alm_service_common.cpp" index="23">
+<item historyLabel="alm_service_common.cpp" index="19">
 <position info="not_deleted" x="3967" y="0"/>
 </item>
-<item historyLabel="AlmDataWriter.cpp" index="22">
+<item historyLabel="AlmDataWriter.cpp" index="18">
 <position info="not_deleted" x="568" y="0"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="1028" y="13"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="1284" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.cpp" index="24">
+<item historyLabel="alm_ssd_mod.cpp" index="20">
 <position info="not_deleted" x="771" y="0"/>
 </item>
-<item historyLabel="alm_ssd_mod.cpp" index="24">
+<item historyLabel="alm_ssd_mod.cpp" index="20">
 <position info="not_deleted" x="1569" y="0"/>
 </item>
-<item historyLabel="alm_mad_mod.cpp" index="18">
+<item historyLabel="alm_mad_mod.cpp" index="14">
 <position info="not_deleted" x="300" y="0"/>
 </item>
-<item historyLabel="axis2_skel_Alm.cpp" index="25">
+<item historyLabel="axis2_skel_Alm.cpp" index="21">
 <position info="not_deleted" x="4736" y="30"/>
 </item>
-<item active="true" historyLabel="AlmDataWriter.cpp" index="22">
+<item historyLabel="AlmDataWriter.cpp" index="18">
 <position info="not_deleted" x="897" y="79"/>
+</item>
+<item historyLabel="alm_mad_mod.cpp" index="22">
+<position info="not_deleted" x="300" y="0"/>
+</item>
+<item historyLabel="alm_ssd_mod.cpp" index="23">
+<position info="not_deleted" x="1346" y="0"/>
+</item>
+<item historyLabel="alm_service_common.cpp" index="24">
+<position info="not_deleted" x="3967" y="0"/>
+</item>
+<item historyLabel="alm_mad_mod.cpp" index="22">
+<position info="not_deleted" x="1061" y="0"/>
+</item>
+<item historyLabel="alm_service_common.cpp" index="24">
+<position info="not_deleted" x="953" y="0"/>
+</item>
+<item historyLabel="AlmDataWriter.cpp" index="18">
+<position info="not_deleted" x="916" y="22"/>
+</item>
+<item active="true" historyLabel="alm_service_common.cpp" index="24">
+<position info="not_deleted" x="953" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

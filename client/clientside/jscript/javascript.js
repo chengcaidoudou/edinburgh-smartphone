@@ -222,8 +222,9 @@ function optimizePortfolioSSDResponse(response)
 	if(ssdReturn.getResultCode()==0) {
 		var expRet = ssdReturn.getExpReturn(); 
 		var ratios = ssdReturn.getPortfolioRatio();
-		var result = "The final wealth is "+(-expRet)*100 + "% of the oringal investment.\n";
-		result += "Asset allocation (in percentage of oringal investment): \n";
+		obj = Math.pow((-expRet),52);
+		var result = "The final wealth is "+Math.round(obj*10000)/100 + "% of the original investment.\n";
+		result += "Asset allocation (in percentage of original investment): \n";
 		
 		var ele_symbolset = document.getElementById("symbolset_ssd");
 		var ele_symbols = ele_symbolset.getElementsByTagName("input");
